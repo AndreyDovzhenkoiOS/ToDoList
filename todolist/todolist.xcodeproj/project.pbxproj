@@ -1,0 +1,801 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47057CEF21BFED89008630ED /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47057CEE21BFED89008630ED /* UIView.swift */; };
+		47057CF321C0117C008630ED /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47057CF221C0117C008630ED /* UIColor.swift */; };
+		47057CFB21C02657008630ED /* DateFormatter.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47057CFA21C02657008630ED /* DateFormatter.swift.swift */; };
+		4705C3AD21B95D1700B70EC3 /* SettingTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705C3AC21B95D1700B70EC3 /* SettingTaskViewModel.swift */; };
+		4705C3AF21B968C100B70EC3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705C3AE21B968C100B70EC3 /* MainViewModel.swift */; };
+		4705C3B121B96B0800B70EC3 /* ModelPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705C3B021B96B0800B70EC3 /* ModelPresentable.swift */; };
+		470BE69821C12EA400D2BCDF /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE69621C12EA400D2BCDF /* NameTableViewCell.swift */; };
+		470BE69921C12EA400D2BCDF /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470BE69721C12EA400D2BCDF /* NameTableViewCell.xib */; };
+		470BE6A021C1308D00D2BCDF /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE69E21C1308D00D2BCDF /* DateTableViewCell.swift */; };
+		470BE6A121C1308D00D2BCDF /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470BE69F21C1308D00D2BCDF /* DateTableViewCell.xib */; };
+		470BE6A321C1317B00D2BCDF /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470BE6A221C1317B00D2BCDF /* Menu.storyboard */; };
+		470BE6AF21C13AF800D2BCDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470BE6AB21C1392800D2BCDF /* Main.storyboard */; };
+		470BE6B121C13BCC00D2BCDF /* SettingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE6B021C13BCC00D2BCDF /* SettingTaskViewController.swift */; };
+		470BE6B621C13C0900D2BCDF /* ChoiceDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE6B221C13C0900D2BCDF /* ChoiceDateViewController.swift */; };
+		470BE6B721C13C0900D2BCDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE6B321C13C0900D2BCDF /* MainViewController.swift */; };
+		470BE6B821C13C0900D2BCDF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE6B421C13C0900D2BCDF /* BaseViewController.swift */; };
+		470BE6B921C13C0900D2BCDF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE6B521C13C0900D2BCDF /* MenuViewController.swift */; };
+		470BE6BB21C13C6400D2BCDF /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE6BA21C13C6400D2BCDF /* FilterButton.swift */; };
+		470BE6BD21C1460800D2BCDF /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470BE6BC21C1460800D2BCDF /* NotificationCenter.swift */; };
+		47398DB821B82642008D8F3B /* SettingTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47398DB721B82642008D8F3B /* SettingTask.storyboard */; };
+		473D8E4B21C26AF9000EAA68 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473D8E4A21C26AF9000EAA68 /* UIAlertController.swift */; };
+		473D8E4F21C273CD000EAA68 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473D8E4D21C273CD000EAA68 /* MainTableViewCell.swift */; };
+		473D8E5021C273CD000EAA68 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473D8E4E21C273CD000EAA68 /* MainTableViewCell.xib */; };
+		47570A8721B9401500683B2F /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47570A8621B9401500683B2F /* MenuViewModel.swift */; };
+		47A28E2B21B7D0C4001DE007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A28E2A21B7D0C4001DE007 /* AppDelegate.swift */; };
+		47A28E3321B7D0C4001DE007 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47A28E3121B7D0C4001DE007 /* ToDoList.xcdatamodeld */; };
+		47A28E3521B7D0C5001DE007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47A28E3421B7D0C5001DE007 /* Assets.xcassets */; };
+		47A28E3821B7D0C5001DE007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A28E3621B7D0C5001DE007 /* LaunchScreen.storyboard */; };
+		47A28E4621B7D143001DE007 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A28E4521B7D143001DE007 /* DatabaseManager.swift */; };
+		47A28E5621B7DC5B001DE007 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A28E5521B7DC5B001DE007 /* UIViewController.swift */; };
+		47A28E5B21B7DE4A001DE007 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A28E5A21B7DE4A001DE007 /* Constants.swift */; };
+		47A38AE221BE84B0002D4BBD /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A38AE121BE84B0002D4BBD /* UITableView.swift */; };
+		47A38AE421BE84D8002D4BBD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A38AE321BE84D8002D4BBD /* String.swift */; };
+		47A38AE621BE850B002D4BBD /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A38AE521BE850B002D4BBD /* UIFont.swift */; };
+		47A38AEC21BE86A2002D4BBD /* NewTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A38AEB21BE86A2002D4BBD /* NewTaskManager.swift */; };
+		47E7621B21B8061C00DB112E /* ModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E7621A21B8061C00DB112E /* ModelItem.swift */; };
+		47E7621E21B8066F00DB112E /* ModelItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E7621D21B8066F00DB112E /* ModelItemManager.swift */; };
+		47E7622421B816D600DB112E /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E7622221B816D600DB112E /* MenuTableViewCell.swift */; };
+		47E7622521B816D600DB112E /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E7622321B816D600DB112E /* MenuTableViewCell.xib */; };
+		47FF54D021C15E930035E015 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FF54CF21C15E930035E015 /* Typealiases.swift */; };
+		8A02DB2421BC3D5100CB268A /* SettingTaskConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02DB2321BC3D5100CB268A /* SettingTaskConfigurator.swift */; };
+		8A02DB2621BC3DD900CB268A /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02DB2521BC3DD900CB268A /* NewTask.swift */; };
+		8A02DB2821BC43DD00CB268A /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02DB2721BC43DD00CB268A /* ModelCell.swift */; };
+		8A02DB4421BC4DA900CB268A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02DB4321BC4DA900CB268A /* BaseTableViewCell.swift */; };
+		8A05411521BC093800C263C2 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A05411421BC093800C263C2 /* NSObject.swift */; };
+		8A0D50FD21C5624B001B3B1A /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D50FC21C5624B001B3B1A /* StatusViewModel.swift */; };
+		8A4E61E821C5458A00D1B00F /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4E61E721C5458A00D1B00F /* StatusTableViewCell.xib */; };
+		8A4E61EA21C545AB00D1B00F /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E61E921C545AB00D1B00F /* StatusTableViewCell.swift */; };
+		8A84955521C7E31900EFBD60 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A84955321C7E31900EFBD60 /* FilterTableViewCell.xib */; };
+		8A84956521C7E82200EFBD60 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A84956421C7E82200EFBD60 /* FilterTableViewCell.swift */; };
+		8A90324D21CE691600EBFB95 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90324B21CE691600EBFB95 /* FilterView.swift */; };
+		8A90324E21CE691600EBFB95 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A90324C21CE691600EBFB95 /* FilterView.xib */; };
+		8AA6409721BD5F03000A8922 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6409621BD5F03000A8922 /* Loader.swift */; };
+		8AAC537521C3B18C00161F35 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAC537421C3B18C00161F35 /* AudioPlayerManager.swift */; };
+		8AAC538121C40C7C00161F35 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAC537E21C40C7C00161F35 /* SWRevealViewController.m */; };
+		8AB8CA4B21C65EB7004083E5 /* CompletedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8CA4A21C65EB7004083E5 /* CompletedDelegate.swift */; };
+		8ACF004921C7763D003E3860 /* TaskDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF004821C7763D003E3860 /* TaskDate.swift */; };
+		8ACF004B21C77764003E3860 /* TaskDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF004A21C77764003E3860 /* TaskDateManager.swift */; };
+		8ACF005221C7BA14003E3860 /* SeparatorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF005021C7BA14003E3860 /* SeparatorSectionView.swift */; };
+		8ACF005921C7BB11003E3860 /* SeparatorSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACF005821C7BB11003E3860 /* SeparatorSectionView.xib */; };
+		8AE5CAB821C695DA00DFF876 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE5CAB721C695DA00DFF876 /* TaskManager.swift */; };
+		8AF028B721CFA2690067E5E6 /* ChoiceDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF028B621CFA2690067E5E6 /* ChoiceDateViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		47057CEE21BFED89008630ED /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = todolist/Extensions/UIKit/UIView.swift; sourceTree = SOURCE_ROOT; };
+		47057CF221C0117C008630ED /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = todolist/Extensions/UIKit/UIColor.swift; sourceTree = SOURCE_ROOT; };
+		47057CFA21C02657008630ED /* DateFormatter.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift.swift; path = todolist/Extensions/Swift/DateFormatter.swift.swift; sourceTree = SOURCE_ROOT; };
+		4705C3AC21B95D1700B70EC3 /* SettingTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTaskViewModel.swift; sourceTree = "<group>"; };
+		4705C3AE21B968C100B70EC3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		4705C3B021B96B0800B70EC3 /* ModelPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPresentable.swift; sourceTree = "<group>"; };
+		470BE69621C12EA400D2BCDF /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameTableViewCell.swift; path = todolist/UI/Cells/SettingTableViewCells/NameTableViewCell/NameTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		470BE69721C12EA400D2BCDF /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NameTableViewCell.xib; path = todolist/UI/Cells/SettingTableViewCells/NameTableViewCell/NameTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		470BE69E21C1308D00D2BCDF /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateTableViewCell.swift; path = todolist/UI/Cells/SettingTableViewCells/DateTableViewCell/DateTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		470BE69F21C1308D00D2BCDF /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DateTableViewCell.xib; path = todolist/UI/Cells/SettingTableViewCells/DateTableViewCell/DateTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		470BE6A221C1317B00D2BCDF /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = todolist/Storyboards/Menu.storyboard; sourceTree = SOURCE_ROOT; };
+		470BE6AB21C1392800D2BCDF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = todolist/Storyboards/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		470BE6B021C13BCC00D2BCDF /* SettingTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingTaskViewController.swift; path = todolist/ViewControllers/SettingTaskViewController.swift; sourceTree = SOURCE_ROOT; };
+		470BE6B221C13C0900D2BCDF /* ChoiceDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoiceDateViewController.swift; path = todolist/ViewControllers/ChoiceDateViewController.swift; sourceTree = SOURCE_ROOT; };
+		470BE6B321C13C0900D2BCDF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = todolist/ViewControllers/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		470BE6B421C13C0900D2BCDF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = todolist/ViewControllers/BaseViewController.swift; sourceTree = SOURCE_ROOT; };
+		470BE6B521C13C0900D2BCDF /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = todolist/ViewControllers/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
+		470BE6BA21C13C6400D2BCDF /* FilterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		470BE6BC21C1460800D2BCDF /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationCenter.swift; path = todolist/Extensions/Swift/NotificationCenter.swift; sourceTree = SOURCE_ROOT; };
+		47398DB721B82642008D8F3B /* SettingTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTask.storyboard; sourceTree = "<group>"; };
+		473D8E4A21C26AF9000EAA68 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = todolist/Extensions/UIKit/UIAlertController.swift; sourceTree = SOURCE_ROOT; };
+		473D8E4D21C273CD000EAA68 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTableViewCell.swift; path = todolist/UI/Cells/MainTableViewCell/MainTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		473D8E4E21C273CD000EAA68 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainTableViewCell.xib; path = todolist/UI/Cells/MainTableViewCell/MainTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		47570A8621B9401500683B2F /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		47A28E2721B7D0C4001DE007 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A28E2A21B7D0C4001DE007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47A28E3221B7D0C4001DE007 /* ToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList.xcdatamodel; sourceTree = "<group>"; };
+		47A28E3421B7D0C5001DE007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47A28E3721B7D0C5001DE007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47A28E3921B7D0C5001DE007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47A28E4521B7D143001DE007 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		47A28E5521B7DC5B001DE007 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		47A28E5A21B7DE4A001DE007 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		47A38AE121BE84B0002D4BBD /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = todolist/Extensions/UIKit/UITableView.swift; sourceTree = SOURCE_ROOT; };
+		47A38AE321BE84D8002D4BBD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = todolist/Extensions/Swift/String.swift; sourceTree = SOURCE_ROOT; };
+		47A38AE521BE850B002D4BBD /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIFont.swift; path = todolist/Extensions/UIKit/UIFont.swift; sourceTree = SOURCE_ROOT; };
+		47A38AEB21BE86A2002D4BBD /* NewTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskManager.swift; sourceTree = "<group>"; };
+		47E7621A21B8061C00DB112E /* ModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelItem.swift; sourceTree = "<group>"; };
+		47E7621D21B8066F00DB112E /* ModelItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelItemManager.swift; sourceTree = "<group>"; };
+		47E7622221B816D600DB112E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		47E7622321B816D600DB112E /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		47FF54CF21C15E930035E015 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = todolist/Logic/General/Typealiases.swift; sourceTree = SOURCE_ROOT; };
+		8A02DB2321BC3D5100CB268A /* SettingTaskConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTaskConfigurator.swift; sourceTree = "<group>"; };
+		8A02DB2521BC3DD900CB268A /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
+		8A02DB2721BC43DD00CB268A /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
+		8A02DB4321BC4DA900CB268A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		8A05411421BC093800C263C2 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		8A0D50FC21C5624B001B3B1A /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		8A4E61E721C5458A00D1B00F /* StatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatusTableViewCell.xib; path = todolist/UI/Cells/SettingTableViewCells/StatusTableViewCell/StatusTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		8A4E61E921C545AB00D1B00F /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTableViewCell.swift; path = todolist/UI/Cells/SettingTableViewCells/StatusTableViewCell/StatusTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		8A84955321C7E31900EFBD60 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FilterTableViewCell.xib; path = ToDoList/UI/Cells/FilterTableViewCell/FilterTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		8A84956421C7E82200EFBD60 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterTableViewCell.swift; path = todolist/UI/Cells/FilterTableViewCell/FilterTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		8A90324B21CE691600EBFB95 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		8A90324C21CE691600EBFB95 /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		8AA6409621BD5F03000A8922 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		8AAC537421C3B18C00161F35 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayerManager.swift; path = todolist/Logic/Managers/AudioPlayerManager.swift; sourceTree = SOURCE_ROOT; };
+		8AAC537E21C40C7C00161F35 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = todolist/library/SWRevealMenu/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+		8AAC537F21C40C7C00161F35 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = todolist/library/SWRevealMenu/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
+		8AAC538021C40C7C00161F35 /* ToDoList-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ToDoList-Bridging-Header.h"; path = "todolist/library/SWRevealMenu/ToDoList-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		8AB8CA4A21C65EB7004083E5 /* CompletedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompletedDelegate.swift; path = todolist/Logic/Protocols/CompletedDelegate.swift; sourceTree = SOURCE_ROOT; };
+		8ACF004821C7763D003E3860 /* TaskDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskDate.swift; path = todolist/Logic/Models/TaskDate.swift; sourceTree = SOURCE_ROOT; };
+		8ACF004A21C77764003E3860 /* TaskDateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskDateManager.swift; path = todolist/Logic/Managers/TaskDateManager.swift; sourceTree = SOURCE_ROOT; };
+		8ACF005021C7BA14003E3860 /* SeparatorSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeparatorSectionView.swift; path = todolist/UI/UIViews/SeparatorSectionView/SeparatorSectionView.swift; sourceTree = SOURCE_ROOT; };
+		8ACF005821C7BB11003E3860 /* SeparatorSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeparatorSectionView.xib; sourceTree = "<group>"; };
+		8AE5CAB721C695DA00DFF876 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskManager.swift; path = todolist/Logic/Managers/TaskManager.swift; sourceTree = SOURCE_ROOT; };
+		8AF028B621CFA2690067E5E6 /* ChoiceDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChoiceDateViewModel.swift; path = todolist/Logic/ViewModels/ChoiceDateViewModel.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47A28E2421B7D0C4001DE007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		471FE68E21BA796400168BF1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				47A38ADC21BE83AF002D4BBD /* Cells */,
+				8AAC537621C3B33500161F35 /* UIViews */,
+				47A38ADB21BE8339002D4BBD /* UIButtons */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		473D8E4C21C273A9000EAA68 /* MainTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				473D8E4D21C273CD000EAA68 /* MainTableViewCell.swift */,
+				473D8E4E21C273CD000EAA68 /* MainTableViewCell.xib */,
+			);
+			path = MainTableViewCell;
+			sourceTree = "<group>";
+		};
+		47570A8521B93FF400683B2F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4705C3AE21B968C100B70EC3 /* MainViewModel.swift */,
+				47570A8621B9401500683B2F /* MenuViewModel.swift */,
+				4705C3AC21B95D1700B70EC3 /* SettingTaskViewModel.swift */,
+				8A0D50FC21C5624B001B3B1A /* StatusViewModel.swift */,
+				8AF028B621CFA2690067E5E6 /* ChoiceDateViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		47A28E1E21B7D0C4001DE007 = {
+			isa = PBXGroup;
+			children = (
+				47A28E2921B7D0C4001DE007 /* ToDoList */,
+				47A28E2821B7D0C4001DE007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47A28E2821B7D0C4001DE007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47A28E2721B7D0C4001DE007 /* ToDoList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47A28E2921B7D0C4001DE007 /* ToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				47A38AE721BE8588002D4BBD /* Logic */,
+				471FE68E21BA796400168BF1 /* UI */,
+				47A28E3F21B7D0D7001DE007 /* ViewControllers */,
+				47A38AD921BE8288002D4BBD /* Storyboards */,
+				47A28E4721B7D926001DE007 /* Extensions */,
+				47A28E4A21B7D985001DE007 /* Library */,
+				47A28E3421B7D0C5001DE007 /* Assets.xcassets */,
+				47A28E2A21B7D0C4001DE007 /* AppDelegate.swift */,
+				47A28E3621B7D0C5001DE007 /* LaunchScreen.storyboard */,
+				47A28E3921B7D0C5001DE007 /* Info.plist */,
+			);
+			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		47A28E3F21B7D0D7001DE007 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				470BE6B421C13C0900D2BCDF /* BaseViewController.swift */,
+				470BE6B321C13C0900D2BCDF /* MainViewController.swift */,
+				470BE6B521C13C0900D2BCDF /* MenuViewController.swift */,
+				470BE6B021C13BCC00D2BCDF /* SettingTaskViewController.swift */,
+				470BE6B221C13C0900D2BCDF /* ChoiceDateViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		47A28E4221B7D11C001DE007 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A02DB2521BC3DD900CB268A /* NewTask.swift */,
+				47E7621A21B8061C00DB112E /* ModelItem.swift */,
+				8A02DB2721BC43DD00CB268A /* ModelCell.swift */,
+				4705C3B021B96B0800B70EC3 /* ModelPresentable.swift */,
+				8ACF004821C7763D003E3860 /* TaskDate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		47A28E4321B7D124001DE007 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6409621BD5F03000A8922 /* Loader.swift */,
+				47E7621D21B8066F00DB112E /* ModelItemManager.swift */,
+				8AE5CAB721C695DA00DFF876 /* TaskManager.swift */,
+				47A38AEB21BE86A2002D4BBD /* NewTaskManager.swift */,
+				8ACF004A21C77764003E3860 /* TaskDateManager.swift */,
+				8AAC537421C3B18C00161F35 /* AudioPlayerManager.swift */,
+				47A28E4421B7D12F001DE007 /* Database */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		47A28E4421B7D12F001DE007 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				47A28E4521B7D143001DE007 /* DatabaseManager.swift */,
+				47A28E3121B7D0C4001DE007 /* ToDoList.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		47A28E4721B7D926001DE007 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47A38AE021BE845C002D4BBD /* Swift */,
+				47A38ADD21BE843D002D4BBD /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		47A28E4A21B7D985001DE007 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				47A28E4B21B7D991001DE007 /* SWRevealMenu */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		47A28E4B21B7D991001DE007 /* SWRevealMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8AAC537F21C40C7C00161F35 /* SWRevealViewController.h */,
+				8AAC537E21C40C7C00161F35 /* SWRevealViewController.m */,
+				8AAC538021C40C7C00161F35 /* ToDoList-Bridging-Header.h */,
+			);
+			path = SWRevealMenu;
+			sourceTree = "<group>";
+		};
+		47A38AD921BE8288002D4BBD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				47398DB721B82642008D8F3B /* SettingTask.storyboard */,
+				470BE6A221C1317B00D2BCDF /* Menu.storyboard */,
+				470BE6AB21C1392800D2BCDF /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		47A38ADB21BE8339002D4BBD /* UIButtons */ = {
+			isa = PBXGroup;
+			children = (
+				470BE6BA21C13C6400D2BCDF /* FilterButton.swift */,
+			);
+			path = UIButtons;
+			sourceTree = "<group>";
+		};
+		47A38ADC21BE83AF002D4BBD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A02DB4321BC4DA900CB268A /* BaseTableViewCell.swift */,
+				8A84955621C7E31E00EFBD60 /* FilterTableViewCell */,
+				473D8E4C21C273A9000EAA68 /* MainTableViewCell */,
+				47E7621F21B8168900DB112E /* MenuTableviewCell */,
+				8A02DB2D21BC466B00CB268A /* SettingTableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		47A38ADD21BE843D002D4BBD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				47057CEE21BFED89008630ED /* UIView.swift */,
+				47A38AE521BE850B002D4BBD /* UIFont.swift */,
+				47057CF221C0117C008630ED /* UIColor.swift */,
+				47A38AE121BE84B0002D4BBD /* UITableView.swift */,
+				47A28E5521B7DC5B001DE007 /* UIViewController.swift */,
+				473D8E4A21C26AF9000EAA68 /* UIAlertController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		47A38AE021BE845C002D4BBD /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				47057CFA21C02657008630ED /* DateFormatter.swift.swift */,
+				8A05411421BC093800C263C2 /* NSObject.swift */,
+				47A38AE321BE84D8002D4BBD /* String.swift */,
+				470BE6BC21C1460800D2BCDF /* NotificationCenter.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		47A38AE721BE8588002D4BBD /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				47A28E4221B7D11C001DE007 /* Models */,
+				47A28E4321B7D124001DE007 /* Managers */,
+				47570A8521B93FF400683B2F /* ViewModels */,
+				47A38AE821BE85D3002D4BBD /* Protocols */,
+				47FF54CE21C15E890035E015 /* General */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		47A38AE821BE85D3002D4BBD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A02DB2321BC3D5100CB268A /* SettingTaskConfigurator.swift */,
+				8AB8CA4A21C65EB7004083E5 /* CompletedDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		47E7621F21B8168900DB112E /* MenuTableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				47E7622221B816D600DB112E /* MenuTableViewCell.swift */,
+				47E7622321B816D600DB112E /* MenuTableViewCell.xib */,
+			);
+			path = MenuTableviewCell;
+			sourceTree = "<group>";
+		};
+		47FF54CE21C15E890035E015 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				47A28E5A21B7DE4A001DE007 /* Constants.swift */,
+				47FF54CF21C15E930035E015 /* Typealiases.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		8A02DB2D21BC466B00CB268A /* SettingTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8A02DB3821BC472000CB268A /* NameTableViewCell */,
+				8A02DB3921BC472F00CB268A /* StatusTableViewCell */,
+				8A02DB3A21BC474700CB268A /* DateTableViewCell */,
+			);
+			path = SettingTableViewCells;
+			sourceTree = "<group>";
+		};
+		8A02DB3821BC472000CB268A /* NameTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				470BE69621C12EA400D2BCDF /* NameTableViewCell.swift */,
+				470BE69721C12EA400D2BCDF /* NameTableViewCell.xib */,
+			);
+			path = NameTableViewCell;
+			sourceTree = "<group>";
+		};
+		8A02DB3921BC472F00CB268A /* StatusTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A4E61E921C545AB00D1B00F /* StatusTableViewCell.swift */,
+				8A4E61E721C5458A00D1B00F /* StatusTableViewCell.xib */,
+			);
+			path = StatusTableViewCell;
+			sourceTree = "<group>";
+		};
+		8A02DB3A21BC474700CB268A /* DateTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				470BE69E21C1308D00D2BCDF /* DateTableViewCell.swift */,
+				470BE69F21C1308D00D2BCDF /* DateTableViewCell.xib */,
+			);
+			path = DateTableViewCell;
+			sourceTree = "<group>";
+		};
+		8A84955621C7E31E00EFBD60 /* FilterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A84956421C7E82200EFBD60 /* FilterTableViewCell.swift */,
+				8A84955321C7E31900EFBD60 /* FilterTableViewCell.xib */,
+			);
+			path = FilterTableViewCell;
+			sourceTree = "<group>";
+		};
+		8A90324A21CE691600EBFB95 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				8A90324B21CE691600EBFB95 /* FilterView.swift */,
+				8A90324C21CE691600EBFB95 /* FilterView.xib */,
+			);
+			name = FilterView;
+			path = todolist/UI/UIViews/FilterView;
+			sourceTree = SOURCE_ROOT;
+		};
+		8AAC537621C3B33500161F35 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A90324A21CE691600EBFB95 /* FilterView */,
+				8AAC537D21C3B72500161F35 /* SeparatorSectionView */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		8AAC537D21C3B72500161F35 /* SeparatorSectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8ACF005021C7BA14003E3860 /* SeparatorSectionView.swift */,
+				8ACF005821C7BB11003E3860 /* SeparatorSectionView.xib */,
+			);
+			path = SeparatorSectionView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47A28E2621B7D0C4001DE007 /* ToDoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47A28E3C21B7D0C5001DE007 /* Build configuration list for PBXNativeTarget "ToDoList" */;
+			buildPhases = (
+				47A28E2321B7D0C4001DE007 /* Sources */,
+				47A28E2421B7D0C4001DE007 /* Frameworks */,
+				47A28E2521B7D0C4001DE007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToDoList;
+			productName = ToDoList;
+			productReference = 47A28E2721B7D0C4001DE007 /* ToDoList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47A28E1F21B7D0C4001DE007 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Andrey Dovzhenko";
+				TargetAttributes = {
+					47A28E2621B7D0C4001DE007 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = 47A28E2221B7D0C4001DE007 /* Build configuration list for PBXProject "todolist" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47A28E1E21B7D0C4001DE007;
+			productRefGroup = 47A28E2821B7D0C4001DE007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47A28E2621B7D0C4001DE007 /* ToDoList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47A28E2521B7D0C4001DE007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E7622521B816D600DB112E /* MenuTableViewCell.xib in Resources */,
+				8A90324E21CE691600EBFB95 /* FilterView.xib in Resources */,
+				470BE6AF21C13AF800D2BCDF /* Main.storyboard in Resources */,
+				8A84955521C7E31900EFBD60 /* FilterTableViewCell.xib in Resources */,
+				8ACF005921C7BB11003E3860 /* SeparatorSectionView.xib in Resources */,
+				47A28E3821B7D0C5001DE007 /* LaunchScreen.storyboard in Resources */,
+				8A4E61E821C5458A00D1B00F /* StatusTableViewCell.xib in Resources */,
+				47A28E3521B7D0C5001DE007 /* Assets.xcassets in Resources */,
+				473D8E5021C273CD000EAA68 /* MainTableViewCell.xib in Resources */,
+				470BE6A321C1317B00D2BCDF /* Menu.storyboard in Resources */,
+				470BE6A121C1308D00D2BCDF /* DateTableViewCell.xib in Resources */,
+				470BE69921C12EA400D2BCDF /* NameTableViewCell.xib in Resources */,
+				47398DB821B82642008D8F3B /* SettingTask.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47A28E2321B7D0C4001DE007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A05411521BC093800C263C2 /* NSObject.swift in Sources */,
+				8ACF005221C7BA14003E3860 /* SeparatorSectionView.swift in Sources */,
+				8A02DB2821BC43DD00CB268A /* ModelCell.swift in Sources */,
+				470BE6A021C1308D00D2BCDF /* DateTableViewCell.swift in Sources */,
+				8A4E61EA21C545AB00D1B00F /* StatusTableViewCell.swift in Sources */,
+				47A28E5621B7DC5B001DE007 /* UIViewController.swift in Sources */,
+				473D8E4B21C26AF9000EAA68 /* UIAlertController.swift in Sources */,
+				470BE6B821C13C0900D2BCDF /* BaseViewController.swift in Sources */,
+				470BE69821C12EA400D2BCDF /* NameTableViewCell.swift in Sources */,
+				8AF028B721CFA2690067E5E6 /* ChoiceDateViewModel.swift in Sources */,
+				47A28E4621B7D143001DE007 /* DatabaseManager.swift in Sources */,
+				470BE6B721C13C0900D2BCDF /* MainViewController.swift in Sources */,
+				47057CFB21C02657008630ED /* DateFormatter.swift.swift in Sources */,
+				8AA6409721BD5F03000A8922 /* Loader.swift in Sources */,
+				47E7622421B816D600DB112E /* MenuTableViewCell.swift in Sources */,
+				47E7621B21B8061C00DB112E /* ModelItem.swift in Sources */,
+				4705C3B121B96B0800B70EC3 /* ModelPresentable.swift in Sources */,
+				473D8E4F21C273CD000EAA68 /* MainTableViewCell.swift in Sources */,
+				8ACF004921C7763D003E3860 /* TaskDate.swift in Sources */,
+				47057CEF21BFED89008630ED /* UIView.swift in Sources */,
+				47A38AE421BE84D8002D4BBD /* String.swift in Sources */,
+				470BE6B121C13BCC00D2BCDF /* SettingTaskViewController.swift in Sources */,
+				8ACF004B21C77764003E3860 /* TaskDateManager.swift in Sources */,
+				47FF54D021C15E930035E015 /* Typealiases.swift in Sources */,
+				8A02DB2421BC3D5100CB268A /* SettingTaskConfigurator.swift in Sources */,
+				8AAC537521C3B18C00161F35 /* AudioPlayerManager.swift in Sources */,
+				47A38AE621BE850B002D4BBD /* UIFont.swift in Sources */,
+				8A84956521C7E82200EFBD60 /* FilterTableViewCell.swift in Sources */,
+				470BE6BB21C13C6400D2BCDF /* FilterButton.swift in Sources */,
+				4705C3AD21B95D1700B70EC3 /* SettingTaskViewModel.swift in Sources */,
+				47A28E5B21B7DE4A001DE007 /* Constants.swift in Sources */,
+				8AE5CAB821C695DA00DFF876 /* TaskManager.swift in Sources */,
+				470BE6B621C13C0900D2BCDF /* ChoiceDateViewController.swift in Sources */,
+				8A02DB2621BC3DD900CB268A /* NewTask.swift in Sources */,
+				47057CF321C0117C008630ED /* UIColor.swift in Sources */,
+				8A90324D21CE691600EBFB95 /* FilterView.swift in Sources */,
+				8A0D50FD21C5624B001B3B1A /* StatusViewModel.swift in Sources */,
+				47E7621E21B8066F00DB112E /* ModelItemManager.swift in Sources */,
+				47A28E3321B7D0C4001DE007 /* ToDoList.xcdatamodeld in Sources */,
+				47A38AE221BE84B0002D4BBD /* UITableView.swift in Sources */,
+				47A28E2B21B7D0C4001DE007 /* AppDelegate.swift in Sources */,
+				47A38AEC21BE86A2002D4BBD /* NewTaskManager.swift in Sources */,
+				8AAC538121C40C7C00161F35 /* SWRevealViewController.m in Sources */,
+				470BE6B921C13C0900D2BCDF /* MenuViewController.swift in Sources */,
+				47570A8721B9401500683B2F /* MenuViewModel.swift in Sources */,
+				8A02DB4421BC4DA900CB268A /* BaseTableViewCell.swift in Sources */,
+				4705C3AF21B968C100B70EC3 /* MainViewModel.swift in Sources */,
+				8AB8CA4B21C65EB7004083E5 /* CompletedDelegate.swift in Sources */,
+				470BE6BD21C1460800D2BCDF /* NotificationCenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		47A28E3621B7D0C5001DE007 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47A28E3721B7D0C5001DE007 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47A28E3A21B7D0C5001DE007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47A28E3B21B7D0C5001DE007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47A28E3D21B7D0C5001DE007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ToDoList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Andrey-Dovzhenko.ToDoList";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ToDoList/Library/SWRevealMenu/ToDoList-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47A28E3E21B7D0C5001DE007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ToDoList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Andrey-Dovzhenko.ToDoList";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ToDoList/Library/SWRevealMenu/ToDoList-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47A28E2221B7D0C4001DE007 /* Build configuration list for PBXProject "todolist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A28E3A21B7D0C5001DE007 /* Debug */,
+				47A28E3B21B7D0C5001DE007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47A28E3C21B7D0C5001DE007 /* Build configuration list for PBXNativeTarget "ToDoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A28E3D21B7D0C5001DE007 /* Debug */,
+				47A28E3E21B7D0C5001DE007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47A28E3121B7D0C4001DE007 /* ToDoList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47A28E3221B7D0C4001DE007 /* ToDoList.xcdatamodel */,
+			);
+			currentVersion = 47A28E3221B7D0C4001DE007 /* ToDoList.xcdatamodel */;
+			path = ToDoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 47A28E1F21B7D0C4001DE007 /* Project object */;
+}

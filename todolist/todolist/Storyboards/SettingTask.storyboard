@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="puc-Xg-4De">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting Task View Controller-->
+        <scene sceneID="luv-tM-Zcl">
+            <objects>
+                <viewController storyboardIdentifier="SettingTaskViewController" id="puc-Xg-4De" customClass="SettingTaskViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0M-U9-yGW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TCJ-rr-uRt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="puc-Xg-4De" id="55S-qB-ce9"/>
+                                    <outlet property="delegate" destination="puc-Xg-4De" id="i3C-02-k89"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TCJ-rr-uRt" firstAttribute="leading" secondItem="pUf-3g-0GI" secondAttribute="leading" id="5cG-Sg-m3s"/>
+                            <constraint firstItem="TCJ-rr-uRt" firstAttribute="bottom" secondItem="pUf-3g-0GI" secondAttribute="bottom" id="GwW-eW-JLp"/>
+                            <constraint firstItem="TCJ-rr-uRt" firstAttribute="top" secondItem="O0M-U9-yGW" secondAttribute="top" id="RbK-Qc-T5s"/>
+                            <constraint firstItem="TCJ-rr-uRt" firstAttribute="trailing" secondItem="pUf-3g-0GI" secondAttribute="trailing" id="uz3-iv-TwX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pUf-3g-0GI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qrk-du-Tjo">
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="9we-00-j4p">
+                            <color key="tintColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="puc-Xg-4De" id="ipT-Wr-Ke5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="GBB-ke-zl7">
+                            <color key="tintColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveAction:" destination="puc-Xg-4De" id="AHX-Us-jFp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="cancel" destination="9we-00-j4p" id="t1F-kE-GR9"/>
+                        <outlet property="save" destination="GBB-ke-zl7" id="7qX-9k-o2l"/>
+                        <outlet property="tableView" destination="TCJ-rr-uRt" id="TRo-dr-hEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWp-Fb-dxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3684" y="128"/>
+        </scene>
+        <!--Choice Date View Controller-->
+        <scene sceneID="i6G-Tz-43f">
+            <objects>
+                <viewController storyboardIdentifier="ChoiceDateViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="uq8-Mo-MhP" customClass="ChoiceDateViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vfc-Wn-4ey">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xJ5-W4-aoJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gkZ-Pj-PDk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Nlb-lV-fIx">
+                                            <rect key="frame" x="22.5" y="123.5" width="330" height="420"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tOU-MH-h9A">
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="420"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="566220278.59534895">
+                                                        <!--2018-12-11 11:24:38 +0000-->
+                                                    </date>
+                                                    <locale key="locale" localeIdentifier="ru"/>
+                                                </datePicker>
+                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8A1-OZ-6br">
+                                                    <rect key="frame" x="280" y="0.0" width="50" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="cancelDefault"/>
+                                                    <state key="selected" image="cancelSelected"/>
+                                                    <state key="highlighted" image="cancelSelected"/>
+                                                    <connections>
+                                                        <action selector="cancelAction:" destination="uq8-Mo-MhP" eventType="touchUpInside" id="Iqi-au-lJg"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="tOU-MH-h9A" secondAttribute="trailing" id="Hm1-bj-S9Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="tOU-MH-h9A" secondAttribute="bottom" id="bEm-54-B4z"/>
+                                                <constraint firstItem="tOU-MH-h9A" firstAttribute="leading" secondItem="Nlb-lV-fIx" secondAttribute="leading" id="dR3-u0-XEi"/>
+                                                <constraint firstItem="tOU-MH-h9A" firstAttribute="top" secondItem="Nlb-lV-fIx" secondAttribute="top" id="i0j-PZ-llG"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXU-tY-IMI">
+                                            <rect key="frame" x="22.5" y="570.5" width="330" height="96.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                            <state key="normal" title="Сохранить">
+                                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="saveAction:" destination="uq8-Mo-MhP" eventType="touchUpInside" id="7ha-2h-ROO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="mXU-tY-IMI" firstAttribute="width" secondItem="tOU-MH-h9A" secondAttribute="width" id="1ZK-GR-fnx"/>
+                                        <constraint firstItem="Nlb-lV-fIx" firstAttribute="width" secondItem="gkZ-Pj-PDk" secondAttribute="width" multiplier="0.88" id="Hzw-y3-jkh"/>
+                                        <constraint firstItem="Nlb-lV-fIx" firstAttribute="centerY" secondItem="gkZ-Pj-PDk" secondAttribute="centerY" id="ReO-4K-tuA"/>
+                                        <constraint firstItem="mXU-tY-IMI" firstAttribute="centerX" secondItem="tOU-MH-h9A" secondAttribute="centerX" id="TDM-XG-aar"/>
+                                        <constraint firstAttribute="bottom" secondItem="mXU-tY-IMI" secondAttribute="bottom" id="bJN-Ls-BRg"/>
+                                        <constraint firstItem="Nlb-lV-fIx" firstAttribute="centerX" secondItem="gkZ-Pj-PDk" secondAttribute="centerX" id="gYg-Id-xvl"/>
+                                        <constraint firstItem="Nlb-lV-fIx" firstAttribute="height" secondItem="gkZ-Pj-PDk" secondAttribute="height" multiplier="0.63" id="giF-x7-QHe"/>
+                                        <constraint firstItem="mXU-tY-IMI" firstAttribute="height" secondItem="tOU-MH-h9A" secondAttribute="height" multiplier="0.23" id="zRk-Gz-7SI"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.24823859279999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="bottom" secondItem="dJC-4k-w3p" secondAttribute="bottom" id="1KY-QK-3gE"/>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="trailing" secondItem="dJC-4k-w3p" secondAttribute="trailing" id="1s9-zf-gzc"/>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="trailing" secondItem="dJC-4k-w3p" secondAttribute="trailing" id="BJP-Qf-6Ld"/>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="leading" secondItem="dJC-4k-w3p" secondAttribute="leading" id="Xo3-Nu-Ape"/>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="top" secondItem="Vfc-Wn-4ey" secondAttribute="top" id="dxm-PG-MFZ"/>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="leading" secondItem="dJC-4k-w3p" secondAttribute="leading" id="hrQ-ae-HWb"/>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="bottom" secondItem="dJC-4k-w3p" secondAttribute="bottom" id="n1R-7a-dIq"/>
+                            <constraint firstItem="xJ5-W4-aoJ" firstAttribute="top" secondItem="Vfc-Wn-4ey" secondAttribute="top" id="x1O-zG-abh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dJC-4k-w3p"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Nlb-lV-fIx" id="0sX-Gl-MDi"/>
+                        <outlet property="datePickerView" destination="tOU-MH-h9A" id="TWR-gL-h1u"/>
+                        <outlet property="saveButton" destination="mXU-tY-IMI" id="iz2-UL-3yW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atx-cA-ol6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4370" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancelDefault" width="25" height="25"/>
+        <image name="cancelSelected" width="25" height="25"/>
+    </resources>
+</document>

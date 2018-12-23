@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SeparatorSectionView" customModule="ToDoList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="501" height="49"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Twc-Du-7Pv">
+                    <rect key="frame" x="0.0" y="0.0" width="501" height="49"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-8c-3oM">
+                    <rect key="frame" x="16" y="0.0" width="485" height="49"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq7-s7-Yda">
+                            <rect key="frame" x="0.0" y="0.0" width="485" height="24.5"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                            <color key="textColor" red="0.3294117647" green="0.52549019610000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROE-mt-849">
+                            <rect key="frame" x="0.0" y="24.5" width="485" height="24.5"/>
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                            <color key="textColor" red="0.3294117647" green="0.52549019610000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="amQ-8c-3oM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8er-f7-wpt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Twc-Du-7Pv" secondAttribute="trailing" id="9nl-kw-yA0"/>
+                <constraint firstItem="amQ-8c-3oM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="BHI-hy-9gE"/>
+                <constraint firstItem="Twc-Du-7Pv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EPp-mM-mcz"/>
+                <constraint firstItem="Twc-Du-7Pv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Zcw-8l-Yjd"/>
+                <constraint firstItem="Twc-Du-7Pv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="daB-rz-E5Q"/>
+                <constraint firstItem="amQ-8c-3oM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="e9s-Iu-lSM"/>
+                <constraint firstItem="amQ-8c-3oM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eIa-6q-7J0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="emptyTaskLabel" destination="ROE-mt-849" id="ueb-MZ-UNT"/>
+                <outlet property="titlelabel" destination="Kq7-s7-Yda" id="bjW-3V-2dL"/>
+            </connections>
+            <point key="canvasLocation" x="231.19999999999999" y="-124.58770614692655"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="separator" width="320" height="23"/>
+    </resources>
+</document>
