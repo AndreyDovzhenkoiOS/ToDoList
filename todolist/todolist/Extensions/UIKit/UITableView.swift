@@ -18,7 +18,7 @@ extension UITableView {
         tableFooterView = UIView(frame: CGRect.zero)
     }
     
-    func reloadWithoutAnimation(){
+    func reloadWithoutAnimation() {
         Timer.scheduledTimer(timeInterval: 0.2,
                              target: self,
                              selector: #selector(reloadData),

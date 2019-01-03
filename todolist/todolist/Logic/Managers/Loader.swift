@@ -49,7 +49,7 @@ struct Loader {
             let type = ModelItemProperty.types[index]
             let image = UIImage(named: type.rawValue)
             
-            let current = name == ModelItemProperty.ModelItemName.current.rawValue
+            let current = name == ModelItemName.current.rawValue
             let isSelect = current ? true : false
             
             modelItems.append(ModelItem(name: name,

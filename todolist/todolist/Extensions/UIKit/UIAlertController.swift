@@ -23,7 +23,7 @@ extension UIAlertController {
                                titleAction: Constants.Alert.exit)
     }
     
-    static public func cancel(completion: @escaping () -> ()) -> UIAlertController {
+    static func cancel(completion: @escaping VoidCallback) -> UIAlertController {
         
         let cancelAlertController = alertController(message: Constants.Alert.cancelTask,
                                                     titleAction: Constants.Alert.cancel)
@@ -34,7 +34,7 @@ extension UIAlertController {
         return cancelAlertController
     }
     
-    static public func saveTask(isEdit: Bool, completion: @escaping () -> ()) -> UIAlertController {
+    static func saveTask(isEdit: Bool, completion: @escaping VoidCallback) -> UIAlertController {
         let message = isEdit ? Constants.Alert.editTask : Constants.Alert.saveTask
         let saveTaskAlertController = alertController(message: message,
                                                       titleAction: Constants.Alert.cancel)

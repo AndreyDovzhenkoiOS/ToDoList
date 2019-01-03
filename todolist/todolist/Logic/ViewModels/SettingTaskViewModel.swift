@@ -15,8 +15,8 @@ final class SettingTaskViewModel: NSObject {
     var task: Task?
     var newTask: NewTask!
     var modelCells: [ModelCell] = []
-    var completionHandler = { (_: Bool) -> () in }
-    var saveHandler = { (_: Bool, _: Bool) -> () in }
+    var completionHandler = { (_: Bool) -> Void in }
+    var saveHandler = { (_: Bool, _: Bool) -> Void in }
     
     //MARK: - Initialization
     

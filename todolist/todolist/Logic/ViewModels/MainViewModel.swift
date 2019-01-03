@@ -14,7 +14,7 @@ final class MainViewModel: NSObject {
     
     var taskDates: [TaskDate] = []
     var modelItem: ModelItem?
-    var completionHandler = { (_: IndexPath, _ : Bool) -> () in }
+    var completionHandler = { (_: IndexPath, _ : Bool) -> Void in }
     
     //MARK: - Initializers
     

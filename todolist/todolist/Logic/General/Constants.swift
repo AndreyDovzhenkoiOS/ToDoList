@@ -84,19 +84,19 @@ enum ModelItemProperty {
     static let count = ModelItemName.allCases.count
     static let names = ModelItemName.allCases
     static let types = ModelItemType.allCases
-    
-    enum ModelItemName: String, CaseIterable {
-        case newTask = "Добавить задачу"
-        case current = "Текущие"
-        case overdue = "Просроченные"
-        case important = "Важные"
-        case urgent = "Срочные"
-        case personal = "Личные"
-        case completed = "Выполненные"
-    }
-    
-    enum ModelItemType: String, CaseIterable {
-        case newTask, current, overdue, important,
-        urgent, personal, completed
-    }
+}
+
+enum ModelItemName: String, CaseIterable {
+    case newTask = "Добавить задачу"
+    case current = "Текущие"
+    case overdue = "Просроченные"
+    case important = "Важные"
+    case urgent = "Срочные"
+    case personal = "Личные"
+    case completed = "Выполненные"
+}
+
+enum ModelItemType: String, CaseIterable {
+    case newTask, current, overdue, important,
+    urgent, personal, completed
 }

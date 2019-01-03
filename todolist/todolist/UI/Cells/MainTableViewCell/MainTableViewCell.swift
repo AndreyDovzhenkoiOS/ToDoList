@@ -80,7 +80,7 @@ final class MainTableViewCell: BaseTableViewCell {
         }
     }
     
-    private func setTextColorDateLablel(){
+    private func setTextColorDateLablel() {
         guard let type = type else { return }
         let isOverdue = type == TaskDateKey.overdue
         dateLabel.textColor = isOverdue ? .textRedColor : .textDefaultColor

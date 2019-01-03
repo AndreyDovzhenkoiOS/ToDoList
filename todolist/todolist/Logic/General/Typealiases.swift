@@ -8,5 +8,5 @@
 
 import Foundation
 
-typealias VoidCallback = () -> ()
+typealias VoidCallback = () -> Void
 typealias Callback<T> = (T) -> Void

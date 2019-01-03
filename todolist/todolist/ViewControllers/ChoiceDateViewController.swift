@@ -32,7 +32,7 @@ final class ChoiceDateViewController: UIViewController {
     //MARK: - Public function
     
     func completionHandlerViewModel() {
-        viewModel?.completionHandler = {[weak self] modelCell in
+        viewModel?.completionHandler = { [weak self] modelCell in
             NotificationCenter.post(NotificationName.notificationSettingDate, modelCell)
             self?.dismiss(animated: true, completion: nil)
         }

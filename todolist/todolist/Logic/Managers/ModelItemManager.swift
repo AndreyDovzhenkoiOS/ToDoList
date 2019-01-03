@@ -34,7 +34,7 @@ struct ModelItemManager {
     }
     
     static func selectDefault() {
-        let current = ModelItemProperty.ModelItemName.current.rawValue
+        let current = ModelItemName.current.rawValue
         let modelItem = modelItems.filter { $0.name == current }.first
         guard let defaultModelItem = modelItem else { return }
         setSelect(for: defaultModelItem)
@@ -43,7 +43,7 @@ struct ModelItemManager {
     //MARK: - Private function
     
     static private func numberTask(for modelItem: ModelItem) -> Int? {
-        guard modelItem.type != ModelItemProperty.ModelItemType.newTask else { return nil }
+        guard modelItem.type != ModelItemType.newTask else { return nil }
         let tasks = TaskManager.filteredTasks(with: modelItem)
         return tasks.isEmpty ? nil : tasks.count
     }

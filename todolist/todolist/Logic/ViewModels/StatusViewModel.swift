@@ -12,7 +12,7 @@ final class StatusViewModel: NSObject {
     
     //MARK: - Public Properties
     
-    public var completionHandler = { (modelCell: ModelCell) -> () in }
+    public var completionHandler = { (modelCell: ModelCell) -> Void in }
     
     //MARK: - Private Properties
     

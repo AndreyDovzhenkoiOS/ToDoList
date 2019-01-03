@@ -51,7 +51,7 @@ final class MainViewController: BaseViewController {
         tableView.settingSeparators()
     }
     
-    private func viewModelCompletionHandler(){
+    private func viewModelCompletionHandler() {
         viewModel.completionHandler = { [weak self] indexPath, isEmptyTasks in
             self?.tableView.deleteRows(at: [indexPath], with: .automatic)
             NotificationCenter.post(NotificationName.notificationMenuUpdate, nil)
@@ -64,9 +64,8 @@ final class MainViewController: BaseViewController {
     
     private func setupFilterButton() {
         guard let modelItem = viewModel.modelItem else { return }
-        let completed = ModelItemProperty.ModelItemType.completed
-        let overdue = ModelItemProperty.ModelItemType.overdue
-        guard modelItem.type != completed, modelItem.type != overdue else {
+        guard modelItem.type !=  ModelItemType.completed,
+            modelItem.type != ModelItemType.overdue else {
             setTitle(string: modelItem.name); return
         }
         installationFilter(tasksDates: viewModel.taskDates,

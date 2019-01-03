@@ -13,7 +13,7 @@ final class ModelItem: NSObject {
     //MARK: - Public properties
     
     let name: String
-    let type: ModelItemProperty.ModelItemType
+    let type: ModelItemType
     let image: UIImage?
 
     var isSelect: Bool
@@ -22,7 +22,7 @@ final class ModelItem: NSObject {
     //MARK: - Initialization
     
     init(name: String,
-         type: ModelItemProperty.ModelItemType,
+         type: ModelItemType,
          image: UIImage?,
          isSelect: Bool,
          number: Int?) {

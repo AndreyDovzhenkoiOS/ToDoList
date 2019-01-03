@@ -14,7 +14,7 @@ final class ChoiceDateViewModel: NSObject {
     
     var newTask: NewTask?
     var modelCell: ModelCell?
-    var completionHandler = {(_: ModelCell) -> Void in }
+    var completionHandler = { (_: ModelCell) -> Void in }
     
     //MARK: - Initialization
     

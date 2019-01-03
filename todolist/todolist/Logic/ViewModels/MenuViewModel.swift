@@ -13,7 +13,7 @@ final class MenuViewModel: NSObject {
     //MARK: - Public Properties
     
     let modelItems: [ModelItem]
-    var completionHandler = { (_ : Bool) -> () in }
+    var completionHandler = { (_ : Bool) -> Void in }
     
     //MARK: - Initializers
     
@@ -27,6 +27,6 @@ final class MenuViewModel: NSObject {
         let modelItem = modelItems[item]
         guard !modelItem.isSelect else { return }
         ModelItemManager.setSelect(for: modelItem)
-        completionHandler(modelItem.type == ModelItemProperty.ModelItemType.newTask)
+        completionHandler(modelItem.type == ModelItemType.newTask)
     }
 }

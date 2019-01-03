@@ -26,8 +26,8 @@ extension UIView {
         self.layer.cornerRadius = radius
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
-
-    public func animateSelect(completion: @escaping() -> ()) {
+    
+    func animateSelect(completion: @escaping VoidCallback) {
         let duration = 0.2
         UIView.animate(withDuration: duration, animations: {
             self.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)

@@ -24,11 +24,11 @@ struct TaskDateManager {
     static func taskDates(with tasks: [Task], modelItem: ModelItem?) -> [TaskDate] {
         
         guard let modelItem = modelItem,
-            modelItem.type != ModelItemProperty.ModelItemType.completed else {
+            modelItem.type != ModelItemType.completed else {
                 return [TaskDate(type: nil, tasks: tasks)]
         }
         
-        guard  modelItem.type != ModelItemProperty.ModelItemType.overdue  else {
+        guard  modelItem.type != ModelItemType.overdue  else {
             return [TaskDate(type: .overdue, tasks: tasks)]
         }
         
