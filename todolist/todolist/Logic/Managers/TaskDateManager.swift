@@ -10,11 +10,11 @@ import Foundation
 
 struct TaskDateManager {
     
-    // MARK: - Public property
+    //MARK: - Public property
     
     static var taskDates: [TaskDate] = []
 
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     static func setselect(_ taskDate: TaskDate, completion: @escaping VoidCallback) {
         taskDate.isSelect.toggle()
@@ -49,11 +49,11 @@ struct TaskDateManager {
         return taskDates
     }
     
-    // MARK: - Public functions
+    //MARK: - Private functions
 
-    // Filtered dates
+    //Filtered dates
     
-    static func overdueDate(for tasks: [Task]) -> [Task] {
+    static private func overdueDate(for tasks: [Task]) -> [Task] {
         return tasks.filter { $0.date ?? Date() < Date() }
     }
     

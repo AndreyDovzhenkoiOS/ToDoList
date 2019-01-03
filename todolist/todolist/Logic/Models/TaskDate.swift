@@ -2,7 +2,7 @@
 //  TaskDate.swift
 //  ToDoList
 //
-//  Created by Andrey on 17.12.2018.
+//  Created by Andrey Dovzhenko on 17.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 
 final class TaskDate: NSObject {
     
-    //MARK: - Public property
+    //MARK: - Public properties
     
     let type: TaskDateKey?
     var tasks: [Task]

@@ -10,7 +10,7 @@ import UIKit
 
 final class NewTask: NSObject {
 
-    //MARK: - Public property
+    //MARK: - Public properties
 
     var name: String?
     var important: Bool

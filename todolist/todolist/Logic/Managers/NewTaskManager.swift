@@ -8,7 +8,7 @@
 
 struct NewTaskManager {
 
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     static func allDate(with newTask: NewTask) -> Date? {
         guard let date = newTask.date,

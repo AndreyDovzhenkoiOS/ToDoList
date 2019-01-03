@@ -2,7 +2,7 @@
 //  BaseViewController.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -14,12 +14,12 @@ class BaseViewController: UIViewController {
     
     @IBOutlet private weak var menuButton: UIBarButtonItem!
     
-    // MARK: - Private property
+    //MARK: - Private property
     
     private var filterView: FilterView!
     private var filterButton: FilterButton?
     
-    // MARK: - Initilization
+    //MARK: - Initilization
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

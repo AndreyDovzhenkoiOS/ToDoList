@@ -10,7 +10,7 @@ import Foundation
 
 struct Loader {
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     static func loadingObjects() {
         ModelItemManager.modelItems = Loader.modelItems()
@@ -39,7 +39,7 @@ struct Loader {
         return modelCells
     }
     
-    // MARK: - Private functions
+    //MARK: - Private functions
     
     static private func modelItems() -> [ModelItem] {
         var modelItems: [ModelItem] = []

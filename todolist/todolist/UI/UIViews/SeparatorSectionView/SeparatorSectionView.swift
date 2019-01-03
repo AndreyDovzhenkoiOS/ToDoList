@@ -15,7 +15,7 @@ final class SeparatorSectionView: UIView {
     @IBOutlet private weak var titlelabel: UILabel!
     @IBOutlet private weak var emptyTaskLabel: UILabel!
 
-    // MARK: - Public property
+    //MARK: - Public property
     
     var taskDate: TaskDate? {
         didSet {
@@ -24,7 +24,7 @@ final class SeparatorSectionView: UIView {
         }
     }
     
-    // MARK: - Initilization
+    //MARK: - Initilization
     
     static func initilization(taskDate: TaskDate?) -> SeparatorSectionView {
         var separatorSectionView = SeparatorSectionView()
@@ -33,7 +33,7 @@ final class SeparatorSectionView: UIView {
         return separatorSectionView
     }
     
-    // MARK: - Private functions
+    //MARK: - Private function
     
     private func updateUI(_ taskDate: TaskDate) {
         titlelabel.text = taskDate.type?.rawValue.uppercased()

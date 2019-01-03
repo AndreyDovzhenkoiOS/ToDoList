@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
-    // MARK: - Core Data stack
+    //MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "ToDoList")
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
 
-    // MARK: - Core Data Saving support
+    //MARK: - Core Data Saving support
 
     func saveContext () {
         let context = persistentContainer.viewContext

@@ -2,7 +2,7 @@
 //  ModelItemManager.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,11 +10,11 @@ import UIKit
 
 struct ModelItemManager {
     
-    // MARK: - Public property
+    //MARK: - Public property
     
     static var modelItems: [ModelItem] = []
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     static func selectModelItem() -> ModelItem? {
         return modelItems.filter { $0.isSelect == true }.first
@@ -40,7 +40,7 @@ struct ModelItemManager {
         setSelect(for: defaultModelItem)
     }
     
-    // MARK: - Private functions
+    //MARK: - Private function
     
     static private func numberTask(for modelItem: ModelItem) -> Int? {
         guard modelItem.type != ModelItemProperty.ModelItemType.newTask else { return nil }

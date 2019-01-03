@@ -2,7 +2,7 @@
 //  MenuTableViewCell.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ final class MenuTableViewCell: BaseTableViewCell {
     
     @IBOutlet private weak var numberLabel: UILabel!
     
-    // MARK: - Public functions
+    //MARK: - Public function
     
     public func updateUI(_ modelItem: ModelItem) {
         setupNumber(modelItem)
@@ -22,7 +22,7 @@ final class MenuTableViewCell: BaseTableViewCell {
         imageView?.image = modelItem.image
     }
     
-    // MARK: - Private functions
+    //MARK: - Private functions
     
     private func setupTextLabel(_ modelItem: ModelItem) {
         textLabel?.font = UIFont.default()

@@ -2,7 +2,7 @@
 //  StatusTableViewCell.swift
 //  ToDoList
 //
-//  Created by Andrey on 08.12.2018.
+//  Created by Andrey Dovzhenko on 08.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,12 +10,12 @@ import UIKit
 
 final class StatusTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
     
-    // MARK: - IBOutlet
+    //MARK: - IBOutlets
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var switchStatus: UISwitch!
     
-    // MARK: - Public property
+    //MARK: - Public properties
     
     public var newTask: NewTask?
     
@@ -27,18 +27,18 @@ final class StatusTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
         }
     }
     
-    // MARK: - Private property
+    //MARK: - Private property
     
     private var viewModel: StatusViewModel?
     
-    // MARK: - IBAction
+    //MARK: - IBAction
     
     @IBAction func statusAction(_ sender: UISwitch) {
         guard let newTask = newTask else { return }
         viewModel?.statusSwitch(for: newTask, isOn: sender.isOn)
     }
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     public func initilization(newTask: NewTask?, modelCell: ModelCell) {
         self.newTask = newTask
@@ -50,7 +50,7 @@ final class StatusTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
         setupSwitchStatus(with: modelCell)
     }
     
-    // MARK: - Private functions
+    //MARK: - Private functions
     
     private func setupViewModel() {
         viewModel = StatusViewModel.initilization(modelCell: modelCell)

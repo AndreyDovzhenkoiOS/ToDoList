@@ -10,16 +10,17 @@ import AVFoundation
 
 final class AudioPlayerManager: NSObject {
     
-    // MARK: - Public property
+    //MARK: - Public property
     
     var audioPlayer = AVAudioPlayer()
     
     //MARK: - Initialization
     
     static let shared = AudioPlayerManager()
+
     private override init() {}
     
-    // MARK: - Public functions
+    //MARK: - Public function
     
     func setSound(_ name: String, _ type: String, _ infinity: Bool) {
         do {

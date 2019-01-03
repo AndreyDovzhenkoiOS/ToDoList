@@ -10,12 +10,12 @@ import UIKit
 
 final class DateTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
     
-    // MARK: - IBOutlet
+    //MARK: - IBOutlets
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     
-    // MARK: - Public property
+    //MARK: - Public properties
     
     public var newTask: NewTask?
     
@@ -35,7 +35,7 @@ final class DateTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
                                        NotificationName.notificationSettingDate)
     }
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     public func initilization(newTask: NewTask?, modelCell: ModelCell) {
         self.newTask = newTask
@@ -53,7 +53,7 @@ final class DateTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
         setupDateLabel()
     }
     
-    // MARK: - Private functions
+    //MARK: - Private function
     
     private func setupDateLabel() {
         guard let newTask = newTask,

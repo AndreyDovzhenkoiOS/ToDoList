@@ -2,7 +2,7 @@
 //  UITableView.swift
 //  ToDoList
 //
-//  Created byAndrey Dovzhenko on 10.12.2018.
+//  Created by Andrey Dovzhenko on 10.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 

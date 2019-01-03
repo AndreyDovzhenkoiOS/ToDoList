@@ -2,7 +2,7 @@
 //  NameTableViewCell.swift
 //  ToDoList
 //
-//  Created by Andrey on 08.12.2018.
+//  Created by Andrey Dovzhenko on 08.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ final class NameTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
     
     @IBOutlet private weak var textField: UITextField!
     
-    // MARK: - Public property
+    //MARK: - Public properties
     
     public var newTask: NewTask?
     
@@ -31,7 +31,7 @@ final class NameTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
         super.awakeFromNib()
     }
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     public func initilization(newTask: NewTask?, modelCell: ModelCell) {
         self.newTask = newTask

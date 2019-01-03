@@ -2,7 +2,7 @@
 //  ModelItem.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 
 final class ModelItem: NSObject {
 
-    //MARK: - Public property
+    //MARK: - Public properties
     
     let name: String
     let type: ModelItemProperty.ModelItemType

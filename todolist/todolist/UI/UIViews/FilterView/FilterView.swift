@@ -14,11 +14,11 @@ final class FilterView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
 
-    // MARK: - Public property
+    //MARK: - Public property
     
     var taskDates: [TaskDate] = []
     
-    // MARK: - Initilization
+    //MARK: - Initilization
     
     static func initilization(navigationFrame: CGRect, taskDates: [TaskDate]) -> FilterView {
         var filterView = FilterView()
@@ -36,7 +36,7 @@ final class FilterView: UIView {
         tableView.registerCell(FilterTableViewCell.identifier)
     }
 
-    // MARK: - Public functions
+    //MARK: - Public function
     
     func showFilterView(isSelected: Bool, height: CGFloat) {
         if isSelected {
@@ -46,7 +46,7 @@ final class FilterView: UIView {
         }
     }
     
-    // MARK: - Private functions
+    //MARK: - Private function
     
     private func hiddenFilterView(height: CGFloat, isHidden: Bool) {
         UIView.animate(withDuration: 0.5, animations: {

@@ -2,7 +2,7 @@
 //  SettingTaskViewModel.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 06.12.2018.
+//  Created by Andrey Dovzhenko on 06.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -29,7 +29,7 @@ final class SettingTaskViewModel: NSObject {
         newTask = NewTask(with: task)
     }
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     public func save()  {
         let isFillAllFields = NewTaskManager.isFillAllFields(for: newTask)
@@ -80,7 +80,7 @@ final class SettingTaskViewModel: NSObject {
         return true
     }
 
-    // MARK: - Private functions
+    //MARK: - Private function
     
     private func checkSameTask() {
         guard let name = newTask.name else { return }

@@ -10,7 +10,7 @@ import UIKit
 
 final class MainTableViewCell: BaseTableViewCell {
     
-    //MARK: - IBOutlet
+    //MARK: - IBOutlets
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
@@ -18,7 +18,7 @@ final class MainTableViewCell: BaseTableViewCell {
     @IBOutlet private weak var statusDownImageView: UIImageView!
     @IBOutlet private weak var statusUpImageView: UIImageView!
     
-    // MARK: - Private property
+    //MARK: - Private property
     
     weak private var delegate: CompletedDelegate?
     private var type: TaskDateKey?
@@ -49,7 +49,7 @@ final class MainTableViewCell: BaseTableViewCell {
         selectedCompleted()
     }
     
-    // MARK: - Private functions
+    //MARK: - Private functions
     
     private func updateUI(_ task: Task) {
         statusDownImageView.isHidden = !task.urgent

@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -14,11 +14,11 @@ final class MainViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: - Private property
+    //MARK: - Private property
     
     private let viewModel = MainViewModel()
     
-    // MARK: - Initilization
+    //MARK: - Initilization
     
     override func viewDidLoad() {
         super.viewDidLoad()

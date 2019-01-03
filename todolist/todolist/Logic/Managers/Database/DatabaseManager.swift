@@ -2,7 +2,7 @@
 //  DatabaseManager.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import CoreData
 
 struct DatabaseManager {
     
-    // MARK: - Public property
+    //MARK: - Public properties
     
     static public let shared = DatabaseManager()
     
@@ -30,7 +30,7 @@ struct DatabaseManager {
         }
     }
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     public func addToDatabase(for entityName: String, propertys: [String: Any?]) {
         let object = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context)

@@ -2,7 +2,7 @@
 //  MainViewModel.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 06.12.2018.
+//  Created by Andrey Dovzhenko on 06.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,13 +10,13 @@ import UIKit
 
 final class MainViewModel: NSObject {
     
-    // MARK: - Public Properties
+    //MARK: - Public properties
     
     var taskDates: [TaskDate] = []
     var modelItem: ModelItem?
     var completionHandler = { (_: IndexPath, _ : Bool) -> () in }
     
-    // MARK: - Initializers
+    //MARK: - Initializers
     
     public func installationTasks() {
         taskDates = TaskDateManager.taskDates(with: tasks(modelItem),
@@ -27,7 +27,7 @@ final class MainViewModel: NSObject {
         modelItem = ModelItemManager.selectModelItem()
     }
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     public func deleteTask(indexPath: IndexPath) {
         let tuple = objects(indexPath: indexPath)
@@ -53,7 +53,7 @@ final class MainViewModel: NSObject {
         return (taskDate, task)
     }
 
-    // MARK: - Private functions
+    //MARK: - Private function
     
     private func tasks(_ modelItem: ModelItem?) -> [Task] {
         guard let modelItem = modelItem else { return [Task]() }

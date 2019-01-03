@@ -2,7 +2,7 @@
 //  ChoiceDateViewController.swift
 //  ToDoList
 //
-//  Created byAndrey Dovzhenko on 10.12.2018.
+//  Created by Andrey Dovzhenko on 10.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,17 +10,17 @@ import UIKit
 
 final class ChoiceDateViewController: UIViewController {
     
-    // MARK: - IBOutlets
+    //MARK: - IBOutlets
     
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var datePickerView: UIDatePicker!
     @IBOutlet private weak var saveButton: UIButton!
     
-    // MARK: - Private functions
+    //MARK: - Private property
     
     private var viewModel: ChoiceDateViewModel?
     
-    // MARK: - Initializers
+    //MARK: - Initializers
     
     func initilization(newTask: NewTask?, modelCell: ModelCell) {
         viewModel = ChoiceDateViewModel.initilization(newTask: newTask,
@@ -29,7 +29,7 @@ final class ChoiceDateViewController: UIViewController {
         updateUI()
     }
     
-    // MARK: - Public functions
+    //MARK: - Public function
     
     func completionHandlerViewModel() {
         viewModel?.completionHandler = {[weak self] modelCell in
@@ -38,16 +38,7 @@ final class ChoiceDateViewController: UIViewController {
         }
     }
     
-    // MARK: - Private functions
-    
-    private func updateUI() {
-        loadViewIfNeeded()
-        settingDatePickerView(type: viewModel?.modelCell?.type)
-        contentView.layer.cornerRadius = 8
-        saveButton.roundCorners(corners: [.topLeft, .topRight], radius: 8)
-    }
-    
-    // MARK: - IBActions
+    //MARK: - IBActions
     
     @IBAction private func saveAction(_ sender: UIButton) {
         sender.animateSelect {
@@ -59,7 +50,14 @@ final class ChoiceDateViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // MARK: - Private functions
+    //MARK: - Private functions
+
+    private func updateUI() {
+        loadViewIfNeeded()
+        settingDatePickerView(type: viewModel?.modelCell?.type)
+        contentView.layer.cornerRadius = 8
+        saveButton.roundCorners(corners: [.topLeft, .topRight], radius: 8)
+    }
     
     private func settingDatePickerView(type: SettingTaskCellType?) {
         if type == SettingTaskCellType.date {

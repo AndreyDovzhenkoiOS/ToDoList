@@ -2,7 +2,7 @@
 //  MenuViewController.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -14,11 +14,11 @@ final class MenuViewController: BaseViewController {
     
     @IBOutlet private weak var tableView: UITableView!
 
-    // MARK: - Private property
+    //MARK: - Private property
     
     private let viewModel = MenuViewModel()
     
-    // MARK: - Initilization
+    //MARK: - Initilization
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ final class MenuViewController: BaseViewController {
         updateNumberTasks()
     }
 
-    //MARK: - Public functions
+    //MARK: - Public function
     
     public func viewModelCompletionHandler() {
         viewModel.completionHandler = { [weak self] isNewTask in

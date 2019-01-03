@@ -23,7 +23,7 @@ final class FilterButton: UIButton {
         return filterButton
     }
     
-    //MARK: - Public functions
+    //MARK: - Public function
     
     public func filterSelected() {
         isSelected.toggle()

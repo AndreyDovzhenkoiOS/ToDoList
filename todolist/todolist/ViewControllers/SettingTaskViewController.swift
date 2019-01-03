@@ -2,7 +2,7 @@
 //  SettingTaskViewController.swift
 //  ToDoList
 //
-//  Created by Anrey Dovzhenko on 05.12.2018.
+//  Created by Andrey Dovzhenko on 05.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,24 +10,24 @@ import UIKit
 
 final class SettingTaskViewController: BaseViewController {
     
-    // MARK: - IBOutlets
+    //MARK: - IBOutlets
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var cancel: UIBarButtonItem!
     @IBOutlet private weak var save: UIBarButtonItem!
     
-    // MARK: - Public Properties
+    //MARK: - Public Properties
     
     let viewModel = SettingTaskViewModel()
     
-    // MARK: - Initializers
+    //MARK: - Initializers
     
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultSetting()
     }
     
-    // MARK: - IBActions
+    //MARK: - IBActions
     
     @IBAction private func saveAction(_ sender: UIBarButtonItem) {
         viewModel.save()
@@ -37,7 +37,7 @@ final class SettingTaskViewController: BaseViewController {
         dismissNewTaskViewController(isSave: false)
     }
 
-    // MARK: - Private functions
+    //MARK: - Private functions
     
     private func dismissNewTaskViewController(isSave: Bool) {
         viewModel.selectModelItem(isSave: isSave)
@@ -85,11 +85,11 @@ final class SettingTaskViewController: BaseViewController {
     }
 }
 
-// MARK: - UITableView
+//MARK: - UITableView
 
 extension SettingTaskViewController: UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: - UITableViewDataSource
+    //MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.modelCells.count
@@ -104,7 +104,7 @@ extension SettingTaskViewController: UITableViewDataSource, UITableViewDelegate 
         return newTaskCell(for: modelCell, indexPath: indexPath)
     }
 
-    // MARK: - UITableViewDelegate
+    //MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.frame.height * 0.08

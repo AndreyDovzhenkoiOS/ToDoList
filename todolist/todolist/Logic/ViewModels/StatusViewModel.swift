@@ -10,11 +10,11 @@ import UIKit
 
 final class StatusViewModel: NSObject {
     
-    // MARK: - Public Properties
+    //MARK: - Public Properties
     
     public var completionHandler = { (modelCell: ModelCell) -> () in }
     
-    // MARK: - Private Properties
+    //MARK: - Private Properties
     
     private var modelCell: ModelCell?
     
@@ -25,7 +25,7 @@ final class StatusViewModel: NSObject {
                                        NotificationName.notificationSettingStatus)
     }
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     static public func initilization(modelCell: ModelCell?) -> StatusViewModel {
         let statusViewModel = StatusViewModel()
@@ -53,7 +53,7 @@ final class StatusViewModel: NSObject {
         }
     }
     
-    // MARK: - Private functions
+    //MARK: - Private function
     
     @objc private func update(_ sender: Notification) {
         guard let updateModelCell = sender.object as? ModelCell,

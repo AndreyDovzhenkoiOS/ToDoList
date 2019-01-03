@@ -10,7 +10,7 @@ import Foundation
 
 struct TaskManager {
     
-    // MARK: - Public functions
+    //MARK: - Public functions
     
     static func sameTask(value: String) -> [Task] {
         let predicate = sameTaskPredicate(value: value)
@@ -30,7 +30,7 @@ struct TaskManager {
         }
     }
     
-    // MARK: - Private functions
+    //MARK: - Private functions
     
     static private func orderedDate(for tasks: [Task],
                                     with comparisonResult: ComparisonResult ) -> [Task] {
@@ -50,6 +50,8 @@ struct TaskManager {
         }
     }
     
+    //Predicates
+
     static private func sameTaskPredicate(value: String) -> NSPredicate {
         return NSPredicate(format: Constants.Key.name.rawValue + " = %@", value)
     }

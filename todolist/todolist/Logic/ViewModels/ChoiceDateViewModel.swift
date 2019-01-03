@@ -2,7 +2,7 @@
 //  ChoiceDateViewModel.swift
 //  ToDoList
 //
-//  Created by Andrey on 23.12.2018.
+//  Created by Andrey Dovzhenko on 23.12.2018.
 //  Copyright © 2018 Andrey Dovzhenko. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 final class ChoiceDateViewModel: NSObject {
 
-    // MARK: - Public property
+    //MARK: - Public properties
     
     var newTask: NewTask?
     var modelCell: ModelCell?
@@ -25,7 +25,7 @@ final class ChoiceDateViewModel: NSObject {
         return viewModel
     }
     
-    // MARK: - Public functions
+    //MARK: - Public function
     
     func saveDate(date: Date) {
         guard let modelCell = modelCell  else { return }
