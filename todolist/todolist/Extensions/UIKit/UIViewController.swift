@@ -8,7 +8,7 @@
 
 extension UIViewController {
     
-    static var storyboardName: String {
+    static private var storyboardName: String {
         let storyboardName = identifier as NSString
         let range = storyboardName.range(of: Constants.viewController)
         return storyboardName.substring(to: range.location)
@@ -35,7 +35,7 @@ extension UIViewController {
     public func present(on viewController: UIViewController) {
         present(viewController, animated: true, completion: nil)
     }
-
+    
     func transitionChoiceDateViewController(for newTask: NewTask?, with modelCell: ModelCell) {
         let modelPresentable = ModelPresentable(storyboardName: SettingTaskViewController.storyboardName,
                                                 identifier: ChoiceDateViewController.identifier)

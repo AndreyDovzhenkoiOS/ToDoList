@@ -42,12 +42,6 @@ final class DateTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
         self.modelCell = modelCell
     }
 
-    @objc func update(_ sender: Notification) {
-        guard let updateModelCell = sender.object as? ModelCell,
-            let type = modelCell?.type else { return }
-        guard updateModelCell.type != type else { updateUI(updateModelCell); return }
-    }
-    
     internal func updateUI(_ modelCell: ModelCell) {
         titleLabel.text = modelCell.title
         setupDateLabel()
@@ -56,15 +50,23 @@ final class DateTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
     //MARK: - Private function
     
     private func setupDateLabel() {
-        guard let newTask = newTask,
-            let type = modelCell?.type else { return }
+        guard let newTask = newTask else { return }
         
-        if type == SettingTaskCellType.date {
+        if modelCell?.type == SettingTaskCellType.date {
             guard let date = newTask.date else { return }
             dateLabel?.text = String.dateToString(date)
         } else {
             guard let time = newTask.time else { return }
             dateLabel?.text = String.timeToString(time)
+        }
+    }
+
+    @objc private func update(_ sender: Notification) {
+        guard let updateModelCell = sender.object as? ModelCell else { return }
+
+        guard updateModelCell.type != modelCell?.type else {
+            updateUI(updateModelCell)
+            return
         }
     }
 }

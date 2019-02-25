@@ -10,19 +10,19 @@ import Foundation
 
 extension DateFormatter {
     
-    static var dateDateFormatt: DateFormatter {
+    static public var dateDateFormatt: DateFormatter {
         let dateFormatt = DateFormatter()
         dateFormatt.dateFormat = "dd.MM.yyyy"
         return dateFormatt
     }
     
-    static var timeDateFormatt: DateFormatter {
+    static public var timeDateFormatt: DateFormatter {
         let dateFormatt = DateFormatter()
         dateFormatt.dateFormat = "HH:mm"
         return dateFormatt
     }
     
-    static var allDateDateFormatt: DateFormatter {
+    static public var allDateDateFormatt: DateFormatter {
         let dateFormatt = DateFormatter()
         dateFormatt.dateFormat = "dd.MM.yyyy, HH:mm"
         return dateFormatt

@@ -9,17 +9,17 @@
 import Foundation
 
 struct ModelCell {
-
+    
     //MARK: - Public properties
     
-    let title: String
-    let type: SettingTaskCellType
-    let identifier: String
-    let isEnabled: Bool
-
+    public let title: String
+    public let type: SettingTaskCellType
+    public let identifier: String
+    public let isEnabled: Bool
+    
     //MARK: - Public function
     
-    func updateModelCell(with isEnabled: Bool) -> ModelCell {
+    public func updateModelCell(with isEnabled: Bool) -> ModelCell {
         return ModelCell(title: title,
                          type: type,
                          identifier: identifier,

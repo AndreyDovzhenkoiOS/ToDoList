@@ -12,28 +12,28 @@ struct ModelItemManager {
     
     //MARK: - Public property
     
-    static var modelItems: [ModelItem] = []
+    static public var modelItems: [ModelItem] = []
     
     //MARK: - Public functions
     
-    static func selectModelItem() -> ModelItem? {
+    static public func selectModelItem() -> ModelItem? {
         return modelItems.filter { $0.isSelect == true }.first
     }
     
-    static func resetSelect() {
+    static public func resetSelect() {
         modelItems.forEach { $0.isSelect = false }
     }
     
-    static func setupNumberTasks() {
+    static public func setupNumberTasks() {
         modelItems.forEach { $0.number = numberTask(for: $0) }
     }
     
-    static func setSelect(for modelItem: ModelItem) {
+    static public func setSelect(for modelItem: ModelItem) {
         resetSelect()
         modelItem.isSelect.toggle()
     }
     
-    static func selectDefault() {
+    static public func selectDefault() {
         let current = ModelItemName.current.rawValue
         let modelItem = modelItems.filter { $0.name == current }.first
         guard let defaultModelItem = modelItem else { return }

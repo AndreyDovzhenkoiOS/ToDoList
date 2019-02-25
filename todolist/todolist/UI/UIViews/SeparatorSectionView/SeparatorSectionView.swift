@@ -9,15 +9,15 @@
 import UIKit
 
 final class SeparatorSectionView: UIView {
-
+    
     //MARK: - IBOutlets
     
     @IBOutlet private weak var titlelabel: UILabel!
     @IBOutlet private weak var emptyTaskLabel: UILabel!
-
+    
     //MARK: - Public property
     
-    var taskDate: TaskDate? {
+    public var taskDate: TaskDate? {
         didSet {
             guard let taskDate = taskDate else { return }
             updateUI(taskDate)
@@ -26,7 +26,7 @@ final class SeparatorSectionView: UIView {
     
     //MARK: - Initilization
     
-    static func initilization(taskDate: TaskDate?) -> SeparatorSectionView {
+    static public func initilization(taskDate: TaskDate?) -> SeparatorSectionView {
         var separatorSectionView = SeparatorSectionView()
         separatorSectionView = .fromNib()
         separatorSectionView.taskDate = taskDate

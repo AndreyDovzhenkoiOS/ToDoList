@@ -9,9 +9,9 @@
 import Foundation
 
 struct ModelPresentable {
-
+    
     //MARK: - Public properties
-
-    let storyboardName: String
-    let identifier: String
+    
+    public let storyboardName: String
+    public let identifier: String
 }

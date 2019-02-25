@@ -39,7 +39,7 @@ final class NameTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
     }
     
     internal func updateUI(_ modelCell: ModelCell) {
-        guard let newTask = newTask, let name = newTask.name else { return }
+        guard let name = newTask?.name else { return }
         textField.text = name
     }
 }

@@ -68,6 +68,7 @@
 		8ACF005221C7BA14003E3860 /* SeparatorSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF005021C7BA14003E3860 /* SeparatorSectionView.swift */; };
 		8ACF005921C7BB11003E3860 /* SeparatorSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACF005821C7BB11003E3860 /* SeparatorSectionView.xib */; };
 		8AE5CAB821C695DA00DFF876 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE5CAB721C695DA00DFF876 /* TaskManager.swift */; };
+		8AE6A8E42223F00100209DD6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6A8E32223F00100209DD6 /* Date.swift */; };
 		8AF028B721CFA2690067E5E6 /* ChoiceDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF028B621CFA2690067E5E6 /* ChoiceDateViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		8ACF005021C7BA14003E3860 /* SeparatorSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeparatorSectionView.swift; path = todolist/UI/UIViews/SeparatorSectionView/SeparatorSectionView.swift; sourceTree = SOURCE_ROOT; };
 		8ACF005821C7BB11003E3860 /* SeparatorSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeparatorSectionView.xib; sourceTree = "<group>"; };
 		8AE5CAB721C695DA00DFF876 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskManager.swift; path = todolist/Logic/Managers/TaskManager.swift; sourceTree = SOURCE_ROOT; };
+		8AE6A8E32223F00100209DD6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = todolist/Extensions/Swift/Date.swift; sourceTree = SOURCE_ROOT; };
 		8AF028B621CFA2690067E5E6 /* ChoiceDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChoiceDateViewModel.swift; path = todolist/Logic/ViewModels/ChoiceDateViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -292,9 +294,9 @@
 		47A38AD921BE8288002D4BBD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				47398DB721B82642008D8F3B /* SettingTask.storyboard */,
-				470BE6A221C1317B00D2BCDF /* Menu.storyboard */,
 				470BE6AB21C1392800D2BCDF /* Main.storyboard */,
+				470BE6A221C1317B00D2BCDF /* Menu.storyboard */,
+				47398DB721B82642008D8F3B /* SettingTask.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -335,9 +337,10 @@
 		47A38AE021BE845C002D4BBD /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				47057CFA21C02657008630ED /* DateFormatter.swift.swift */,
 				8A05411421BC093800C263C2 /* NSObject.swift */,
 				47A38AE321BE84D8002D4BBD /* String.swift */,
+				8AE6A8E32223F00100209DD6 /* Date.swift */,
+				47057CFA21C02657008630ED /* DateFormatter.swift.swift */,
 				470BE6BC21C1460800D2BCDF /* NotificationCenter.swift */,
 			);
 			path = Swift;
@@ -569,6 +572,7 @@
 				470BE6BB21C13C6400D2BCDF /* FilterButton.swift in Sources */,
 				4705C3AD21B95D1700B70EC3 /* SettingTaskViewModel.swift in Sources */,
 				47A28E5B21B7DE4A001DE007 /* Constants.swift in Sources */,
+				8AE6A8E42223F00100209DD6 /* Date.swift in Sources */,
 				8AE5CAB821C695DA00DFF876 /* TaskManager.swift in Sources */,
 				470BE6B621C13C0900D2BCDF /* ChoiceDateViewController.swift in Sources */,
 				8A02DB2621BC3DD900CB268A /* NewTask.swift in Sources */,

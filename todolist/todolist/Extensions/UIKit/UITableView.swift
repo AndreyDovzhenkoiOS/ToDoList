@@ -8,21 +8,18 @@
 
 extension UITableView {
     
-    func registerCell(_ identifier: String) {
+    public func registerCell(_ identifier: String) {
         register(UINib(nibName: identifier, bundle: nil),
                  forCellReuseIdentifier: identifier)
     }
     
-    func settingSeparators() {
+    public func settingSeparators() {
         separatorColor = .separator
         tableFooterView = UIView(frame: CGRect.zero)
     }
     
-    func reloadWithoutAnimation() {
-        Timer.scheduledTimer(timeInterval: 0.2,
-                             target: self,
-                             selector: #selector(reloadData),
-                             userInfo: nil, repeats: false)
+    public func reloadWithoutAnimation() {
+        perform(#selector(updateData), with: nil, afterDelay: 0.2)
     }
     
     @objc private func updateData() {

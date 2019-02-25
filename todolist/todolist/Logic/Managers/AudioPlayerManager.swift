@@ -12,17 +12,17 @@ final class AudioPlayerManager: NSObject {
     
     //MARK: - Public property
     
-    var audioPlayer = AVAudioPlayer()
+    public var audioPlayer = AVAudioPlayer()
     
     //MARK: - Initialization
     
-    static let shared = AudioPlayerManager()
-
+    static public let shared = AudioPlayerManager()
+    
     private override init() {}
     
     //MARK: - Public function
     
-    func setSound(_ name: String, _ type: String, _ infinity: Bool) {
+    public func setSound(_ name: String, _ type: String, _ infinity: Bool) {
         do {
             let file = Bundle.main.path(forResource: name, ofType: type)
             let url = URL(fileURLWithPath: file!)

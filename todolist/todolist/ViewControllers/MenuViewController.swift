@@ -48,11 +48,11 @@ final class MenuViewController: BaseViewController {
         viewModelCompletionHandler()
         setTitle(string: Constants.Title.myTask)
         tableView.registerCell(MenuTableViewCell.identifier)
-        NotificationCenter.addObserver(self, #selector(update(_:)),
+        NotificationCenter.addObserver(self, #selector(updateNumberTasks(_:)),
                                        NotificationName.notificationMenuUpdate)
     }
     
-    @objc private func update(_ sender: Notification) {
+    @objc private func updateNumberTasks(_ sender: Notification) {
         updateNumberTasks()
     }
     

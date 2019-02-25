@@ -100,3 +100,9 @@ enum ModelItemType: String, CaseIterable {
     case newTask, current, overdue, important,
     urgent, personal, completed
 }
+
+enum RefreshTableType {
+    case reloadWithoutAnimation
+    case reloaData
+}
+

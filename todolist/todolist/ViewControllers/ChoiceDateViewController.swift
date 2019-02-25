@@ -22,7 +22,7 @@ final class ChoiceDateViewController: UIViewController {
     
     //MARK: - Initializers
     
-    func initilization(newTask: NewTask?, modelCell: ModelCell) {
+    public func initilization(newTask: NewTask?, modelCell: ModelCell) {
         viewModel = ChoiceDateViewModel.initilization(newTask: newTask,
                                                       modelCell: modelCell)
         completionHandlerViewModel()
@@ -31,7 +31,7 @@ final class ChoiceDateViewController: UIViewController {
     
     //MARK: - Public function
     
-    func completionHandlerViewModel() {
+    public func completionHandlerViewModel() {
         viewModel?.completionHandler = { [weak self] modelCell in
             NotificationCenter.post(NotificationName.notificationSettingDate, modelCell)
             self?.dismiss(animated: true, completion: nil)

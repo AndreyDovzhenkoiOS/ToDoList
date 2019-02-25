@@ -8,15 +8,15 @@
 
 extension UIFont {
     
-    static func `default`() -> UIFont {
+    static public func `default`() -> UIFont {
         return UIFont(name:"Helvetica", size: 19)!
     }
 
-    static func bold() -> UIFont {
+    static public func bold() -> UIFont {
         return UIFont(name:"Helvetica-Bold", size: 18)!
     }
 
-    static func light() -> UIFont {
+    static public func light() -> UIFont {
         return UIFont(name:"Helvetica-Light", size: 18)!
     }
 }

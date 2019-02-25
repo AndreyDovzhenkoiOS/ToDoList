@@ -7,29 +7,29 @@
 //
 
 struct NewTaskManager {
-
+    
     //MARK: - Public functions
     
-    static func allDate(with newTask: NewTask) -> Date? {
+    static public func allDate(with newTask: NewTask) -> Date? {
         guard let date = newTask.date,
             let time = newTask.time else { return nil }
         let allDate = String.dateToString(date) + Constants.comma + String.timeToString(time)
-        return String.stringToAllDate(allDate)
+        return Date.stringToAllDate(allDate)
     }
     
-    static func isEnabled(with newTask: NewTask) -> Bool {
+    static public func isEnabled(with newTask: NewTask) -> Bool {
         let statuses = [newTask.important, newTask.personal, newTask.urgent]
         return statuses.filter { $0 == false }.count == statuses.count
     }
     
-    static func isFillAllFields(for newTask: NewTask) -> (allFields: Bool, isEmptyName: Bool) {
+    static public func isFillAllFields(for newTask: NewTask) -> (allFields: Bool, isEmptyName: Bool) {
         guard let name = newTask.name else { return (false, false) }
         return (!name.isEmpty &&
-                newTask.date != nil &&
-                newTask.time != nil, !name.isEmpty)
+            newTask.date != nil &&
+            newTask.time != nil, !name.isEmpty)
     }
     
-    static func setName(for newTask: NewTask, with name: String, string: String) {
+    static public func setName(for newTask: NewTask, with name: String, string: String) {
         var text = name
         let isDelete = string == Constants.TextField.delete
         if isDelete {
@@ -40,7 +40,7 @@ struct NewTaskManager {
         newTask.name = text.removingWhitespaces()
     }
     
-    static func setSwitch(for newTask: NewTask, with type: SettingTaskCellType, isOn: Bool) {
+    static public func setSwitch(for newTask: NewTask, with type: SettingTaskCellType, isOn: Bool) {
         switch type {
         case .important:
             newTask.important = isOn

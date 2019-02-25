@@ -33,7 +33,7 @@ final class StatusTableViewCell: BaseTableViewCell, SettingTaskConfigurator {
     
     //MARK: - IBAction
     
-    @IBAction func statusAction(_ sender: UISwitch) {
+    @IBAction private func statusAction(_ sender: UISwitch) {
         guard let newTask = newTask else { return }
         viewModel?.statusSwitch(for: newTask, isOn: sender.isOn)
     }

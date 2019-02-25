@@ -12,9 +12,9 @@ final class MainViewModel: NSObject {
     
     //MARK: - Public properties
     
-    var taskDates: [TaskDate] = []
-    var modelItem: ModelItem?
-    var completionHandler = { (_: IndexPath, _ : Bool) -> Void in }
+    public var taskDates: [TaskDate] = []
+    public var modelItem: ModelItem?
+    public var completionHandler = { (_: IndexPath, _ : Bool) -> Void in }
     
     //MARK: - Initializers
     
@@ -32,19 +32,14 @@ final class MainViewModel: NSObject {
     public func deleteTask(indexPath: IndexPath) {
         let tuple = objects(indexPath: indexPath)
         DatabaseManager.shared.removeFromDatabase(with: tuple.task)
-        taskDates = TaskDateManager.taskDates(with: tasks(modelItem),
-                                              modelItem: modelItem)
-        completionHandler(indexPath, taskDates[indexPath.section].tasks.isEmpty)
+        refreshTaskDates(indexPath: indexPath)
     }
     
     public func selectedCompleted(for task: Task, type: TaskDateKey?) {
         guard let section = taskDates.index(where: { $0.type == type }) else { return }
         guard let row = taskDates[section].tasks.index(where: { $0 == task }) else { return }
         DatabaseManager.shared.saveContext()
-        taskDates = TaskDateManager.taskDates(with: tasks(modelItem),
-                                              modelItem: modelItem)
-        completionHandler(IndexPath(row: row, section: section),
-                          taskDates[section].tasks.isEmpty)
+        refreshTaskDates(indexPath: IndexPath(row: row, section: section))
     }
     
     public func objects(indexPath: IndexPath) -> (taskDate: TaskDate, task: Task) {
@@ -52,11 +47,22 @@ final class MainViewModel: NSObject {
         let task = taskDate.tasks[indexPath.row]
         return (taskDate, task)
     }
-
+    
+    public func noTasks() -> Bool {
+        return !taskDates.filter { !$0.tasks.isEmpty }.isEmpty
+    }
+    
     //MARK: - Private function
     
     private func tasks(_ modelItem: ModelItem?) -> [Task] {
         guard let modelItem = modelItem else { return [Task]() }
         return TaskManager.filteredTasks(with: modelItem)
+    }
+    
+    private func refreshTaskDates(indexPath: IndexPath) {
+        taskDates = TaskDateManager.taskDates(with: tasks(modelItem),
+                                              modelItem: modelItem)
+        let isEmpty = taskDates[indexPath.section].tasks.isEmpty
+        completionHandler(indexPath, isEmpty)
     }
 }

@@ -12,8 +12,8 @@ final class MenuViewModel: NSObject {
     
     //MARK: - Public Properties
     
-    let modelItems: [ModelItem]
-    var completionHandler = { (_ : Bool) -> Void in }
+    public let modelItems: [ModelItem]
+    public var completionHandler = { (_ : Bool) -> Void in }
     
     //MARK: - Initializers
     

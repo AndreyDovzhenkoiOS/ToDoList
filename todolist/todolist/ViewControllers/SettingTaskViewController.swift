@@ -18,7 +18,7 @@ final class SettingTaskViewController: BaseViewController {
     
     //MARK: - Public Properties
     
-    let viewModel = SettingTaskViewModel()
+    public let viewModel = SettingTaskViewModel()
     
     //MARK: - Initializers
     
@@ -36,7 +36,7 @@ final class SettingTaskViewController: BaseViewController {
     @IBAction private func cancelAction(_ sender: UIBarButtonItem) {
         dismissNewTaskViewController(isSave: false)
     }
-
+    
     //MARK: - Private functions
     
     private func dismissNewTaskViewController(isSave: Bool) {
@@ -103,7 +103,7 @@ extension SettingTaskViewController: UITableViewDataSource, UITableViewDelegate 
         let modelCell = viewModel.modelCells[indexPath.section]
         return newTaskCell(for: modelCell, indexPath: indexPath)
     }
-
+    
     //MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -119,7 +119,7 @@ extension SettingTaskViewController: UITableViewDataSource, UITableViewDelegate 
         guard viewModel.isSelectDateOrTime(modelCell.type) else { return }
         transitionChoiceDateViewController(for: viewModel.newTask, with: modelCell)
     }
-
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard viewModel.checkHeightForHeader(section) else { return 0 }
         return tableView.frame.height * 0.042

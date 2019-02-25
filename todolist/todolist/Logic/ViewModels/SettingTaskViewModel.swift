@@ -12,11 +12,11 @@ final class SettingTaskViewModel: NSObject {
     
     //MARK: - Property
     
-    var task: Task?
-    var newTask: NewTask!
-    var modelCells: [ModelCell] = []
-    var completionHandler = { (_: Bool) -> Void in }
-    var saveHandler = { (_: Bool, _: Bool) -> Void in }
+    public var task: Task?
+    public var newTask: NewTask!
+    public var modelCells: [ModelCell] = []
+    public var completionHandler = { (_: Bool) -> Void in }
+    public var saveHandler = { (_: Bool, _: Bool) -> Void in }
     
     //MARK: - Initialization
     
@@ -37,7 +37,7 @@ final class SettingTaskViewModel: NSObject {
             completionHandler(isFillAllFields.isEmptyName)
             return
         }
-
+        
         checkSameTask()
     }
     
@@ -50,16 +50,7 @@ final class SettingTaskViewModel: NSObject {
                                           Constants.Key.date.rawValue: date,
                                           Constants.Key.time.rawValue: newTask.time,
                                           Constants.Key.completed.rawValue: newTask.completed]
-        changeSave(propertys: propertys)
-        
-    }
-    
-    public func changeSave(propertys: [String: Any?]) {
-        if let task = task {
-            DatabaseManager.shared.setProperty(for: task, propertys: propertys)
-        } else {
-            DatabaseManager.shared.addToDatabase(for: Task.identifier, propertys: propertys)
-        }
+        saveChanges(propertys: propertys)
     }
     
     public func selectModelItem(isSave: Bool) {
@@ -68,18 +59,14 @@ final class SettingTaskViewModel: NSObject {
     }
     
     public func checkHeightForHeader(_ section: Int) -> Bool {
-        let modelCell = modelCells[section]
-        guard modelCell.type == SettingTaskCellType.date ||
-            modelCell.type == SettingTaskCellType.important else { return false }
-        return true
+        let type = modelCells[section].type
+        return type == SettingTaskCellType.date || type == SettingTaskCellType.important
     }
     
     public func isSelectDateOrTime(_ type: SettingTaskCellType) -> Bool {
-        guard type == SettingTaskCellType.date ||
-            type == SettingTaskCellType.time else { return false }
-        return true
+        return type == SettingTaskCellType.date || type == SettingTaskCellType.time
     }
-
+    
     //MARK: - Private function
     
     private func checkSameTask() {
@@ -89,6 +76,14 @@ final class SettingTaskViewModel: NSObject {
             saveHandler(taskName == name, true)
         } else {
             saveHandler(tasks.isEmpty, false)
+        }
+    }
+
+    private func saveChanges(propertys: [String: Any?]) {
+        if let task = task {
+            DatabaseManager.shared.setProperty(for: task, propertys: propertys)
+        } else {
+            DatabaseManager.shared.addToDatabase(for: Task.identifier, propertys: propertys)
         }
     }
 }

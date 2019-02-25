@@ -12,13 +12,13 @@ struct TaskManager {
     
     //MARK: - Public functions
     
-    static func sameTask(value: String) -> [Task] {
+    static public func sameTask(value: String) -> [Task] {
         let predicate = sameTaskPredicate(value: value)
         return DatabaseManager.shared.getFromDatabase(for: Task.identifier,
                                                       predicate: predicate) as! [Task]
     }
     
-    static func filteredTasks(with modelItem: ModelItem) -> [Task] {
+    static public func filteredTasks(with modelItem: ModelItem) -> [Task] {
         let predicate = TaskManager.predicate(modelItem)
         let tasks = DatabaseManager.shared.getFromDatabase(for: Task.identifier,
                                                            predicate: predicate) as! [Task]
@@ -51,24 +51,28 @@ struct TaskManager {
     }
     
     //Predicates
-
+    
     static private func sameTaskPredicate(value: String) -> NSPredicate {
         return NSPredicate(format: Constants.Key.name.rawValue + " = %@", value)
     }
-
+    
     static private func currentPredicate() -> NSPredicate {
-        return NSPredicate(format:  Constants.Key.completed.rawValue + " = %@", NSNumber(value: false))
+        return NSPredicate(format:  Constants.Key.completed.rawValue + " = %@",
+                           NSNumber(value: false))
     }
     
     static private func overdueTaskPredicate() -> NSPredicate {
         let predicate = NSPredicate(format: Constants.Key.date.rawValue + " < %@", NSDate())
         let noCompletedPredicate = NSPredicate(format: Constants.Key.completed.rawValue + " = %@", NSNumber(value: false))
-        return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate, noCompletedPredicate])
+        return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and,
+                                   subpredicates: [predicate, noCompletedPredicate])
     }
     
     static private func completedPredicate(key: String, isCompleted: Bool) -> NSPredicate {
         let predicate = NSPredicate(format: key + " = %@", NSNumber(value: true))
-        let completedPredicate = NSPredicate(format: Constants.Key.completed.rawValue + " = %@", NSNumber(value: isCompleted))
-        return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and, subpredicates: [predicate, completedPredicate])
+        let completedPredicate = NSPredicate(format: Constants.Key.completed.rawValue + " = %@",
+                                             NSNumber(value: isCompleted))
+        return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.and,
+                                   subpredicates: [predicate, completedPredicate])
     }
 }

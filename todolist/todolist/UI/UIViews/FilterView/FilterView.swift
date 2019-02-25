@@ -78,7 +78,7 @@ extension FilterView: UITableViewDataSource, UITableViewDelegate {
     //MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        TaskDateManager.setselect(taskDates[indexPath.row]) {
+        taskDates[indexPath.row].selected {
             tableView.reloadData()
             NotificationCenter.post(NotificationName.notificationMainUpdate, nil)
         }

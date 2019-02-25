@@ -9,23 +9,23 @@
 import Foundation
 
 final class ModelItem: NSObject {
-
+    
     //MARK: - Public properties
     
-    let name: String
-    let type: ModelItemType
-    let image: UIImage?
-
-    var isSelect: Bool
-    var number: Int?
+    public let name: String
+    public let type: ModelItemType
+    public let image: UIImage?
+    
+    public var isSelect: Bool
+    public var number: Int?
     
     //MARK: - Initialization
     
-    init(name: String,
-         type: ModelItemType,
-         image: UIImage?,
-         isSelect: Bool,
-         number: Int?) {
+    public init(name: String,
+                type: ModelItemType,
+                image: UIImage?,
+                isSelect: Bool,
+                number: Int?) {
         self.name = name
         self.type = type
         self.image = image

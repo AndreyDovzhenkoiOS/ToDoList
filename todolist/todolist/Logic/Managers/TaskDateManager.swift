@@ -12,26 +12,19 @@ struct TaskDateManager {
     
     //MARK: - Public property
     
-    static var taskDates: [TaskDate] = []
-
+    static public var taskDates: [TaskDate] = []
+    
     //MARK: - Public functions
-    
-    static func setselect(_ taskDate: TaskDate, completion: @escaping VoidCallback) {
-        taskDate.isSelect.toggle()
-        completion()
-    }
-    
-    static func taskDates(with tasks: [Task], modelItem: ModelItem?) -> [TaskDate] {
+
+    static public func taskDates(with tasks: [Task], modelItem: ModelItem?) -> [TaskDate] {
         
         guard let modelItem = modelItem,
-            modelItem.type != ModelItemType.completed else {
-                return [TaskDate(type: nil, tasks: tasks)]
+            modelItem.type != ModelItemType.completed,
+            modelItem.type != ModelItemType.overdue
+            else {
+                return [TaskDate(type: .none, tasks: tasks)]
         }
-        
-        guard  modelItem.type != ModelItemType.overdue  else {
-            return [TaskDate(type: .overdue, tasks: tasks)]
-        }
-        
+
         taskDates.forEach {
             switch $0.type {
             case .overdue?:
@@ -50,7 +43,7 @@ struct TaskDateManager {
     }
     
     //MARK: - Private functions
-
+    
     //Filtered dates
     
     static private func overdueDate(for tasks: [Task]) -> [Task] {

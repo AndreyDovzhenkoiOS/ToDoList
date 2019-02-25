@@ -12,22 +12,15 @@ final class FilterTableViewCell: BaseTableViewCell {
     
     //MARK: - IBOutlets
     
-    @IBOutlet weak var separatorView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var statusImageView: UIImageView!
+    @IBOutlet private weak var separatorView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var statusImageView: UIImageView!
     
     //MARK: - Public function
     
-    func updateUI(_ taskDate: TaskDate) {
+    public func updateUI(_ taskDate: TaskDate) {
         titleLabel?.text = taskDate.type?.rawValue
-        setupSeparatorView(taskDate: taskDate)
         statusImageView.isHidden = !taskDate.isSelect
-    }
-    
-    //MARK: - Private function
-    
-    private func setupSeparatorView(taskDate: TaskDate) {
-        guard let type = taskDate.type else { return }
-        separatorView.isHidden = type == TaskDateKey.sevenDay
+        separatorView.isHidden = taskDate.type == TaskDateKey.sevenDay
     }
 }

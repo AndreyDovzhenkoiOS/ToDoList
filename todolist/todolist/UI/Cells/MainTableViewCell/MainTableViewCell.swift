@@ -25,7 +25,6 @@ final class MainTableViewCell: BaseTableViewCell {
     
     private var task: Task? {
         didSet {
-            guard let task = task else { return }
             updateUI(task)
         }
     }
@@ -51,7 +50,9 @@ final class MainTableViewCell: BaseTableViewCell {
     
     //MARK: - Private functions
     
-    private func updateUI(_ task: Task) {
+    private func updateUI(_ task: Task?) {
+        guard let task = task else { return }
+
         statusDownImageView.isHidden = !task.urgent
         statusUpImageView.isHidden = !task.personal
         
@@ -66,7 +67,7 @@ final class MainTableViewCell: BaseTableViewCell {
     private func setupDateLabel(date: Date?) {
         guard let date = date else { return }
         setTextDateLabel(date: date)
-        setTextColorDateLablel()
+        setupTextColorDateLablel()
     }
     
     private func setTextDateLabel(date: Date) {
@@ -80,10 +81,9 @@ final class MainTableViewCell: BaseTableViewCell {
         }
     }
     
-    private func setTextColorDateLablel() {
-        guard let type = type else { return }
-        let isOverdue = type == TaskDateKey.overdue
-        dateLabel.textColor = isOverdue ? .textRedColor : .textDefaultColor
+    private func setupTextColorDateLablel() {
+        dateLabel.textColor = type == TaskDateKey.overdue ?
+            .textRedColor : .textDefaultColor
     }
     
     private func selectedCompleted() {

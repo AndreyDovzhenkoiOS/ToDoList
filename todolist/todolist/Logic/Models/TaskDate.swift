@@ -12,15 +12,20 @@ final class TaskDate: NSObject {
     
     //MARK: - Public properties
     
-    let type: TaskDateKey?
-    var tasks: [Task]
-    var isSelect: Bool
+    public let type: TaskDateKey?
+    public var tasks: [Task]
+    public var isSelect: Bool
     
     //MARK: - Initialization
     
-    init(type: TaskDateKey?, tasks: [Task]) {
+    public init(type: TaskDateKey?, tasks: [Task]) {
         self.type = type
         self.tasks = tasks
         self.isSelect = true
+    }
+    
+    public func selected(completion: @escaping VoidCallback) {
+        isSelect.toggle()
+        completion()
     }
 }

@@ -33,8 +33,9 @@ final class FilterButton: UIButton {
     //MARK: - Private functions
     
     private func imageStatusFilter() -> String {
-        guard isSelected else { return Constants.Image.filterDown.rawValue }
-        return Constants.Image.filterUp.rawValue
+        return isSelected ?
+            Constants.Image.filterDown.rawValue :
+            Constants.Image.filterUp.rawValue
     }
     
     private func installArrangement() {

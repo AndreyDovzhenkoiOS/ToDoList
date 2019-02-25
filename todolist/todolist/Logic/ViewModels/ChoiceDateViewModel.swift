@@ -9,16 +9,16 @@
 import UIKit
 
 final class ChoiceDateViewModel: NSObject {
-
+    
     //MARK: - Public properties
     
-    var newTask: NewTask?
-    var modelCell: ModelCell?
-    var completionHandler = { (_: ModelCell) -> Void in }
+    public var newTask: NewTask?
+    public var modelCell: ModelCell?
+    public var completionHandler = { (_: ModelCell) -> Void in }
     
     //MARK: - Initialization
     
-    static func initilization(newTask: NewTask?, modelCell: ModelCell?) -> ChoiceDateViewModel {
+    static public func initilization(newTask: NewTask?, modelCell: ModelCell?) -> ChoiceDateViewModel {
         let viewModel = ChoiceDateViewModel()
         viewModel.newTask = newTask
         viewModel.modelCell = modelCell
@@ -27,8 +27,8 @@ final class ChoiceDateViewModel: NSObject {
     
     //MARK: - Public function
     
-    func saveDate(date: Date) {
-        guard let modelCell = modelCell  else { return }
+    public func saveDate(date: Date) {
+        guard let modelCell = modelCell else { return }
         if modelCell.type == SettingTaskCellType.date {
             newTask?.date = date
         } else {

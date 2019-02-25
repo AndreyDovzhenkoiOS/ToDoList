@@ -7,7 +7,7 @@
 //
 
 extension NSObject {
-    static var identifier: String{
+    static public var identifier: String{
         return String(describing: self)
     }
 }

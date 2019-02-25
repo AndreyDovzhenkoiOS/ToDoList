@@ -12,7 +12,7 @@ final class MainViewController: BaseViewController {
 
     //MARK: - IBOutlet
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     //MARK: - Private property
     
@@ -25,7 +25,7 @@ final class MainViewController: BaseViewController {
         settingTableView()
         setupNotification()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         defaultSetting()
@@ -37,9 +37,9 @@ final class MainViewController: BaseViewController {
         settingViewModel()
         setupFilterButton()
         setupMenu(install: true)
-        tableView.reloadData()
+        refreshTableView(.reloaData)
     }
-    
+
     private func settingViewModel() {
         viewModel.installationSelectedModelItem()
         viewModel.installationTasks()
@@ -55,13 +55,10 @@ final class MainViewController: BaseViewController {
         viewModel.completionHandler = { [weak self] indexPath, isEmptyTasks in
             self?.tableView.deleteRows(at: [indexPath], with: .automatic)
             NotificationCenter.post(NotificationName.notificationMenuUpdate, nil)
-            guard !isEmptyTasks else {
-                self?.tableView.reloadWithoutAnimation()
-                return
-            }
+            self?.refreshTableView(isEmptyTasks ? .reloadWithoutAnimation : .none)
         }
     }
-    
+
     private func setupFilterButton() {
         guard let modelItem = viewModel.modelItem else { return }
         guard modelItem.type !=  ModelItemType.completed,
@@ -73,12 +70,23 @@ final class MainViewController: BaseViewController {
     }
     
     private func setupNotification()  {
-        NotificationCenter.addObserver(self, #selector(update(_:)),
+        NotificationCenter.addObserver(self, #selector(updateList(_:)),
                                        NotificationName.notificationMainUpdate)
     }
     
-    @objc private func update(_ sender: Notification) {
-        tableView.reloadData()
+    @objc private func updateList(_ sender: Notification) {
+        refreshTableView(.reloaData)
+    }
+    
+    private func refreshTableView(_ refreshTabletype: RefreshTableType?) {
+        tableView.isScrollEnabled = viewModel.noTasks()
+        switch refreshTabletype {
+        case .reloaData?:
+            tableView.reloadData()
+        case .reloadWithoutAnimation?:
+             tableView.reloadWithoutAnimation()
+        case .none: break
+        }
     }
 }
 
@@ -132,7 +140,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let taskDate = viewModel.taskDates[section]
         let size: CGFloat = taskDate.tasks.isEmpty ? 0.068 : 0.042
-        return taskDate.type != nil ? tableView.frame.height * size : 0
+        return taskDate.type != .none ? tableView.frame.height * size : 0
     }
 }
 

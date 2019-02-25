@@ -12,12 +12,12 @@ struct Loader {
     
     //MARK: - Public functions
     
-    static func loadingObjects() {
+    static public func loadingObjects() {
         ModelItemManager.modelItems = Loader.modelItems()
         TaskDateManager.taskDates = Loader.taskDates()
     }
     
-    static func modelCells() -> [ModelCell] {
+    static public func modelCells() -> [ModelCell] {
         var modelCells: [ModelCell] = []
         
         let identifiers = [NameTableViewCell.identifier,
